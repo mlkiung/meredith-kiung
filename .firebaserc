@@ -1,5 +1,7 @@
 {
   "projects": {
-    "firebones": "firebones-6bc2a"
+    "bear-gets-digital": "bear-gets-digital",
+    "wip": "bear-gets-digital",
+    "default": "bear-gets-digital"
   }
 }

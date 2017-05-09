@@ -2,13 +2,22 @@
 import React from 'react'
 import {Router, Route, IndexRedirect, browserHistory} from 'react-router'
 import {render} from 'react-dom'
+import { Provider } from 'react-redux'
 
 import WhoAmI from './components/WhoAmI'
 import NotFound from './components/NotFound'
 
 import firebase from 'APP/fire'
 
-import Demos from 'APP/demos'
+import store from './store'
+
+// import Demos from 'APP/demos'
+import Navbar from 'APP/app/components/Navbar'
+import PostList from 'APP/app/components/PostList'
+import Post from 'APP/app/components/Post'
+import NewPost from 'APP/app/components/NewPost'
+import AboutMe from 'APP/app/components/AboutMe'
+import Projects from 'APP/app/components/Projects'
 
 // Get the auth API from Firebase.
 const auth = firebase.auth()
@@ -41,23 +50,31 @@ auth.onAuthStateChanged(user => user || auth.signInAnonymously())
 // and whatever children the router gave us.
 const App = ({children}) =>
   <div>
-    <nav>
+    {/*<nav>
       {/* WhoAmI takes a firebase auth API and renders either a
           greeting and a logout button, or sign in buttons, depending
-          on if anyone's logged in */}
+          on if anyone's logged in
       <WhoAmI auth={auth}/>
-    </nav>
-    {/* Render our children (whatever the router gives us) */}
+    </nav>*/}
+  {/* Render our children (whatever the router gives us) */}
+  <Navbar />
     {children}
   </div>
 
 render(
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRedirect to="demos"/>
-      {Demos /* Put all the demos and a description page at /demos */}
-    </Route>
-    <Route path='*' component={NotFound}/>
-  </Router>,
+  <Provider store={store}>
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <IndexRedirect to="/home"/>
+        {/*Demos /* Put all the demos and a description page at /demos */}
+        <Route path="/home" component={PostList} />
+        <Route path="/post" component={Post} />
+        <Route path="/about-me" component={AboutMe} />
+        <Route path="/projects" component={Projects} />
+        <Route path="/newpost" component={NewPost} />
+      </Route>
+      <Route path='*' component={NotFound}/>
+    </Router>
+  </Provider>,
   document.getElementById('main')
 )

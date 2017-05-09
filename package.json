@@ -1,5 +1,5 @@
 {
-  "name": "__BONES_NEEDS_A_NAME__",
+  "name": "bear_gets_digital",
   "version": "0.0.1",
   "description": "A happy little burning skeleton.",
   "main": "index.js",
@@ -43,6 +43,8 @@
     "babel-preset-stage-2": "^6.18.0",
     "bcryptjs": "^2.4.0",
     "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "bootswatch": "^3.3.7",
     "chai-enzyme": "^0.5.2",
     "chalk": "^1.1.3",
     "check-node-version": "^1.1.2",
