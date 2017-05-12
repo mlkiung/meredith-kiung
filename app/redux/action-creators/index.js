@@ -15,7 +15,16 @@ export const addNewPost = (post) => {
     firebase.database().ref(`${post.title}`).set({title: post.title, content: post.content})
 }
 
-export const loadNewPost = ({ post }) => ({
+// getPost gets a single post and loads it to state
+export const getPost = post => {
+  dispatch =>
+    root.on('child-added', snap => {
+      console.log('snap for getPost', snap.val())
+      loadPost(snap.val())
+    })
+}
+
+export const loadPost = ({ post }) => ({
   type: ADD_NEW_POST,
   post
 })
@@ -25,7 +34,7 @@ export const getAllPosts = () => {
   dispatch =>
     root.on('child-added', snap => {
       console.log(snap.val())
-      loadAllPosts(posts)
+      loadAllPosts(snap.val())
     })
 }
 

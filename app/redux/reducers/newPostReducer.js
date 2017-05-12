@@ -10,7 +10,7 @@ const posts = (state = initialState, action) => {
   switch (action.type) {
 
     case ADD_NEW_POST:
-      return action.addNewPost
+      return action.post
 
     case GET_ALL_POSTS:
       return action.allPosts
