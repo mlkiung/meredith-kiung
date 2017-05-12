@@ -15,7 +15,6 @@ class NewPost extends Component {
     this.onTitleChange = this.onTitleChange.bind(this)
     this.onContentChange = this.onContentChange.bind(this)
     this.onPublishPress = this.onPublishPress.bind(this)
-
   }
 
   onTitleChange(event) {
