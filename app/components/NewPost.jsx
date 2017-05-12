@@ -18,11 +18,6 @@ class NewPost extends Component {
 
   }
 
-  onPublish(event) {
-    event.preventDefault()
-
-  }
-
   onTitleChange(event) {
     event.preventDefault()
     this.setState({title: event.target.value})
@@ -38,10 +33,8 @@ class NewPost extends Component {
     console.log(this.props)
     const title = this.state.title
     const content = this.state.content
-    this.props.addNewPost({title, content})
+    this.props.addNewPost({ title, content })
   }
-
-
 
   render() {
     return (
@@ -73,12 +66,6 @@ class NewPost extends Component {
     )
   }
 }
-
-// const mapStateToProps = state => {
-//   return {
-
-//   }
-// }
 
 const mapDispatchToProps = dispatch => ({addNewPost})
 
