@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 import Post from 'APP/app/components/Post'
 
-export default class PostList extends Component {
+class PostList extends Component {
   constructor() {
     super()
   }
@@ -15,3 +16,7 @@ export default class PostList extends Component {
     )
   }
 }
+
+const mapStateToProps = state => ({posts: state.posts})
+
+export default connect(mapStateToProps)(PostList)

@@ -58,6 +58,7 @@ const App = ({children}) =>
     </nav>*/}
   {/* Render our children (whatever the router gives us) */}
   <Navbar />
+  <PostList />
     {children}
   </div>
 

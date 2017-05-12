@@ -31,7 +31,7 @@ class Navbar extends Component {
               <div className="form-group">
                 <input type="text" className="form-control" placeholder="Search" />
               </div>
-              <button type="submit" className="btn btn-default">Submit</button>
+              <button type="submit" className="btn btn-default btn-submit">Submit</button>
             </form>
           </div>
         </div>

@@ -1,18 +1,23 @@
 import React from 'react'
 
-import {ADD_NEW_POST} from 'APP/app/redux/constants'
+import { ADD_NEW_POST, GET_ALL_POSTS } from 'APP/app/redux/constants'
 
 const initialState = {}
 
-export default function newPostReducer(state = initialState, action) {
+const posts = (state = initialState, action) => {
+  console.log('action in newPostReducer', action)
 
   switch (action.type) {
 
     case ADD_NEW_POST:
-      return action.newPost
+      return action.addNewPost
+
+    case GET_ALL_POSTS:
+      return action.allPosts
 
     default:
       return state
-
   }
 }
+
+export default posts
