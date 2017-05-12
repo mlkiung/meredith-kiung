@@ -17,13 +17,9 @@ import NewPost from 'APP/app/components/NewPost'
 import AboutMe from 'APP/app/components/AboutMe'
 import Projects from 'APP/app/components/Projects'
 
-// // Our root App component just renders a little frame with a nav
-// // and whatever children the router gave us.
 const App = ({children}) =>
   <div>
-  {/* Render our children (whatever the router gives us) */}
-  <Navbar />
-  <PostList />
+    <Navbar />
     {children}
   </div>
 
