@@ -13,7 +13,7 @@ import store from './store'
 import Navbar from 'APP/app/components/Navbar'
 import PostList from 'APP/app/components/PostList'
 import Post from 'APP/app/components/Post'
-import NewPost from 'APP/app/components/NewPost'
+import NewPost from 'APP/app/containers/NewPost'
 import AboutMe from 'APP/app/components/AboutMe'
 import Projects from 'APP/app/components/Projects'
 
