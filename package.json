@@ -1,7 +1,7 @@
 {
   "name": "bear_gets_digital",
   "version": "0.0.1",
-  "description": "A happy little burning skeleton.",
+  "description": "Personal Site of Meredith Kiung",
   "main": "index.js",
   "engines": {
     "node": ">= 7.0.0"
@@ -25,19 +25,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/queerviolet/bones.git"
+    "url": "git+https://github.com/mlkiung/bear_gets_digital.git"
   },
   "keywords": [
     "react",
-    "redux",
-    "skeleton"
+    "redux"
   ],
-  "author": "Ashi Krishnan <me@ashi.works>",
+  "author": "Meredith Kiung <meredith.kiung@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/queerviolet/bones/issues"
-  },
-  "homepage": "https://github.com/queerviolet/bones#readme",
   "dependencies": {
     "axios": "^0.15.2",
     "babel-preset-stage-2": "^6.18.0",
