@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { browserHistory } from 'react-router'
 
 import { addNewPost } from '../redux/action-creators'
 
@@ -33,6 +34,7 @@ class NewPost extends Component {
     const title = this.state.title
     const content = this.state.content
     this.props.addNewPost({ title, content })
+    browserHistory.push('/')
   }
 
   render() {

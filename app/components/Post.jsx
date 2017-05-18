@@ -9,11 +9,17 @@ class Post extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getPost()
+    console.log('props in componentDidMount Post.jsx', this.props)
+    // can't filter an object durrrrrrrrr
+    // this.props.posts.filter(posts => {
+    //   console.log(posts)
+    //   // posts.post.title === title
+    // })
   }
 
   render() {
     console.log('props in Post.jsx', this.props)
+    console.log('state in Post.jsx', this.state)
     return (
       <div>
         <div className="panel panel-default">
@@ -29,7 +35,7 @@ class Post extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({ post: state.post })
+const mapStateToProps = state => ({ posts: state.posts })
 const mapDispatchToProps = dispatch => ({ getPost })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Post)

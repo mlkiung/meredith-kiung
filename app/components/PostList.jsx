@@ -9,9 +9,10 @@ class PostList extends Component {
   }
 
   render() {
+    console.log('props in PostList.jsx', this.props)
     return (
       <div>
-        <Post />
+        <Post posts={this.props.posts} />
       </div>
     )
   }

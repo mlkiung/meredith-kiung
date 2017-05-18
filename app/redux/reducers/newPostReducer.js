@@ -13,7 +13,7 @@ const posts = (state = initialState, action) => {
       return action.post
 
     case GET_ALL_POSTS:
-      return action.allPosts
+      return action.posts
 
     default:
       return state
