@@ -5,6 +5,14 @@ colors {
   985E6D - sunset
   192231 - evening
 }
+
+fonts {
+  font-family: 'Nixie One', cursive;
+  font-family: 'Cutive Mono', monospace;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Raleway Dots', cursive;
+}
 */
 
 .btn-submit {
@@ -58,6 +66,7 @@ fieldset {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .static-color {
@@ -85,6 +94,35 @@ fieldset {
   color: #98878F;
 }
 
-.navbar-default > .no-margin: {
+.no-margin: {
   margin: 0px;
+}
+
+.font-mono {
+  font-family: 'Cutive Mono', monospace;
+}
+
+.font-sans {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.font-serif {
+  font-family: 'Nixie One', cursive;
+}
+
+.banner {
+  color: #fff;
+  height: 16rem;
+  z-index: 1000;
+  padding: 0 2rem;
+  transition: 400ms ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-giant {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
