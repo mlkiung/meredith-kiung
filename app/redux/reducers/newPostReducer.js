@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ADD_NEW_POST, GET_ALL_POSTS } from 'APP/app/redux/constants'
+import { GET_A_POST, GET_ALL_POSTS } from 'APP/app/redux/constants'
 
 const initialState = {}
 
@@ -9,11 +9,11 @@ const posts = (state = initialState, action) => {
 
   switch (action.type) {
 
-    case ADD_NEW_POST:
-      return action.post
-
     case GET_ALL_POSTS:
       return action.posts
+      
+    case GET_A_POST:
+      return action.post
 
     default:
       return state

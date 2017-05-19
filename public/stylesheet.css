@@ -1,3 +1,12 @@
+/*
+colors {
+  494E6B - dark blue
+  98878F - cloudy
+  985E6D - sunset
+  192231 - evening
+}
+*/
+
 .btn-submit {
 	margin-left: 5px;
 }
@@ -23,4 +32,59 @@
 fieldset {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  height: 500px;
+  background-size: cover;
+  border-radius: 0px;
+  border-color: gray;
+  border-width: 5px;
+}
+
+.scroll-img {
+  background-image: url('https://images5.alphacoders.com/568/568653.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.static-color {
+  background-color: #494E6B;
+}
+
+#sandcastle {
+  background-image: url('images/sandcastle.png')
+}
+
+#ifoodie {
+  background-image: url('images/ifoodie.png')
+}
+
+.one-third {
+  display: flex;
+  align-content: center;
+}
+
+.color-stormy {
+  background-color: #494E6B;
+}
+
+.font-cloudy {
+  color: #98878F;
+}
+
+.navbar-default > .no-margin: {
+  margin: 0px;
 }
