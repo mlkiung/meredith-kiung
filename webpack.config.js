@@ -26,6 +26,9 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json', '*']
   },
   module: {
+    loaders: [
+      { test: /\.css$/, loader: "style-loader!css-loader"}
+    ],
     rules: [{
       test: /jsx?$/,
       exclude: /(node_modules|bower_components)/,

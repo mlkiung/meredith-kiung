@@ -5,3 +5,22 @@
 .indenting {
 	margin-left: 10px;
 }
+
+#post-list {
+  margin: 10px;
+}
+
+.breadcrumb {
+  margin-bottom: 0px;
+}
+
+#tags-color {
+  color: gray;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+fieldset {
+  margin-left: 10px;
+  margin-right: 10px;
+}

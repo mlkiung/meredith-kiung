@@ -11,11 +11,14 @@ class NewPost extends Component {
     this.state = {
       title: '',
       content: '',
+      image: '',
+      tags: ''
     }
 
     this.onTitleChange = this.onTitleChange.bind(this)
     this.onContentChange = this.onContentChange.bind(this)
     this.onPublishPress = this.onPublishPress.bind(this)
+    this.onTagsChange = this.onTagsChange.bind(this)
   }
 
   onTitleChange(event) {
@@ -28,12 +31,18 @@ class NewPost extends Component {
     this.setState({content: event.target.value})
   }
 
+  onTagsChange(event) {
+    event.preventDefault()
+    this.setState({tags: event.target.value})
+  }
+
   onPublishPress(event) {
     event.preventDefault()
     console.log(this.props)
     const title = this.state.title
     const content = this.state.content
-    this.props.addNewPost({ title, content })
+    const tags = this.state.tags
+    this.props.addNewPost({ title, content, tags })
     browserHistory.push('/')
   }
 
@@ -53,6 +62,12 @@ class NewPost extends Component {
               <label htmlFor="contentArea" className="col-lg-2 control-label" placeholder="Content">Content</label>
               <div className="col-lg-10">
                 <textarea value={this.state.content} onChange={this.onContentChange} className="form-control" rows="3" id="contentArea"></textarea>
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="tagArea" className="col-lg-2 control-label" placeholder="tags">Tags</label>
+              <div className="col-lg-10">
+                <textarea value={this.state.tags} onChange={this.onTagsChange} className="form-control" rows="3" id="tagArea"></textarea>
               </div>
             </div>
             <div className="form-group">

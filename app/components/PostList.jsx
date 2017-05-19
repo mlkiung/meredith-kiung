@@ -1,23 +1,39 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import Post from 'APP/app/components/Post'
+import PostCard from 'APP/app/components/PostCard'
 
 class PostList extends Component {
-  constructor() {
+  constructor(props) {
     super()
   }
-
+  
   render() {
-    console.log('props in PostList.jsx', this.props)
+    const posts = this.props.posts
+    let postsArray = []
+
+    for (let key in posts) {
+      postsArray.push(posts[key])
+    }
+    
     return (
-      <div>
-        <Post posts={this.props.posts} />
+      <div id="post-list">
+        {postsArray.map(post => {
+            return (
+              <div key={post.key}>
+                <PostCard post={post}/>
+              </div>
+            )
+        })}
       </div>
     )
   }
 }
 
-const mapStateToProps = state => ({posts: state.posts})
+const mapStateToProps = state => {
+  return {
+    posts: state.posts
+  }
+}
 
 export default connect(mapStateToProps)(PostList)
