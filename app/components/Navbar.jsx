@@ -30,6 +30,10 @@ const Navbar = () => {
 
 export default Navbar
 
+//*********************************************************************************
+
+//ORIGINAL CODE -- KEEP UNTIL STYLING IS FIXED
+
 //    <nav className="navbar navbar-default color-stormy no-margin banner">
 //      <div className="container-fluid">
 //        <div className="navbar-header font-cloudy font-mono">
