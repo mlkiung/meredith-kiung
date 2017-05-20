@@ -20,7 +20,7 @@ class PostList extends Component {
       <div id="post-list">
         {postsArray.map(post => {
             return (
-              <div key={post.key}>
+              <div key={post.key} className="post-card">
                 <PostCard post={post}/>
               </div>
             )

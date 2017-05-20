@@ -6,15 +6,15 @@ import PostList from './PostList'
 import { getPost } from '../redux/action-creators'
 
 const PostCard = props => {
-  console.log('props in Post', props)
+
   let tags = props.post.tags.split(', ')
-  console.log('split tags', tags)
+
   return (
     <div id="PostCard">
       <div className="panel panel-default">
-        <div className="panel-heading">
-          <h3 className="panel-title">{props.post.title}</h3>
-          <ol className="breadcrumb">{
+        <div className="panel-heading" id="post-card-no-border">
+          <h3 className="panel-title font-serif">{props.post.title}</h3>
+          <ol className="breadcrumb font-mono">{
               tags.map(tag => {
                 return (
                   <li className="tags" key={tag}>
@@ -25,7 +25,7 @@ const PostCard = props => {
             }
           </ol>
         </div>
-        <div className="panel-body">
+        <div className="panel-body font-sans">
           {props.post.content}
         </div>
       </div>
