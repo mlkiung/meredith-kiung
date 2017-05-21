@@ -3,6 +3,12 @@ import React from 'react'
 import {Router, Route, IndexRedirect, browserHistory} from 'react-router'
 import {render} from 'react-dom'
 import { Provider } from 'react-redux'
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import AppBar from 'material-ui/AppBar';
 
 import NotFound from './components/NotFound'
 
@@ -20,24 +26,28 @@ import AboutMe from 'APP/app/components/AboutMe'
 import Projects from 'APP/app/components/Projects'
 
 const onAppEnter = () => {
+  injectTapEventPlugin();
   firebase.database().ref('/posts').on('value', snap => {
     store.dispatch(loadAllPosts(snap.val()))
   })
 }
 
 const onPostEnter = (props) => {
-  console.log('props', props)
+//  console.log('props', props)
   firebase.database().ref(`/posts/${props.params.postKey}`).on('value', snap => {
-    console.log('snap', snap.val())
+//    console.log('snap', snap.val())
     store.dispatch(loadPost(snap.val()))
   })
 }
 
 const App = ({children}) =>
-  <div>
-    <Navbar />
-    {children}
-  </div>
+  <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+    <div>
+      <AppBar />
+      <Navbar />
+      {children}
+    </div>
+  </MuiThemeProvider>
 
 render(
   <Provider store={store}>
