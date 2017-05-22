@@ -1,19 +1,24 @@
-import React from 'react';
-import {cyan500} from 'material-ui/styles/colors';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import AppBar from 'material-ui/AppBar';
+const colors = {
+  navy: '#22252c',
+  coral: '#e14658',
+  mountain: '#3f3250',
+  scrub: '#c0b3a0'
+}
 
-const muiTheme = getMuiTheme({
+export default {
+  fontFamily: 'Roboto, sans-serif',
   palette: {
-    
+    primary1Color: colors.mountain,
+    primary2Color: colors.navy,
+    primary3Color: colors.mountain,
+    accent1Color: colors.scrub,
+    accent2Color: '#f5f5f5',
+    accent3Color: '#9e9e9e',
+    textColor: '#727171',
+    alternateTextColor: '#ffffff',
+    canvasColor: '#ffffff',
+    borderColor: '#e0e0e0',
+    pickerHeaderColor: '#00bcd4',
+    shadowColor: '#000000',
   },
-  appBar: {
-    color: palette.primary1Color,
-    textColor: palette.alternateTextColor,
-    height: spacing.desktopKeylineIncrement,
-    titleFontWeight: typography.fontWeightNormal,
-    padding: spacing.desktopGutter
-  },
-  
-})
+}

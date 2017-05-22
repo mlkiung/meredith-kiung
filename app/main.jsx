@@ -3,18 +3,18 @@ import React from 'react'
 import {Router, Route, IndexRedirect, browserHistory} from 'react-router'
 import {render} from 'react-dom'
 import { Provider } from 'react-redux'
-import injectTapEventPlugin from 'react-tap-event-plugin';
+import injectTapEventPlugin from 'react-tap-event-plugin'
 
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import muiTheme from './muiTheme'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
 import NotFound from './components/NotFound'
 
 import firebase from 'APP/fire'
 
 import store from './store'
-import { loadAllPosts, getAllPosts } from 'APP/app/redux/action-creators'
+import { loadAllPosts, getAllPosts, loadPost } from 'APP/app/redux/action-creators'
 
 import NewPost from 'APP/app/containers/NewPost'
 import Navbar from 'APP/app/components/Navbar'
@@ -37,10 +37,12 @@ const onPostEnter = (props) => {
 }
 
 const App = ({children}) =>
-  <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+  <MuiThemeProvider muiTheme={getMuiTheme(muiTheme)}>
     <div>
       <Navbar />
-      {children}
+      <div id="app-body">
+        {children}
+      </div>
     </div>
   </MuiThemeProvider>
 
@@ -51,7 +53,7 @@ render(
     <Router history={browserHistory}>
       <Route path="/" component={App} onEnter={onAppEnter}>
         <IndexRedirect to="/home"/>
-        <Route path="/home" component={PostList} />
+        <Route path="/home" component={AboutMe} />
         <Route path="/posts" component={PostList} />
         <Route path="/posts/:postKey" component={Post} onEnter={onPostEnter} />
         <Route path="/about-me" component={AboutMe} />

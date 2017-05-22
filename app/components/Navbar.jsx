@@ -16,10 +16,10 @@ const NavBar = () => {
   const rightButtons = (
     <div>
       <Link to={'/projects'}>
-        <FlatButton label="Projects" style={styles.buttonStyle} />
+        <FlatButton label="Portfolio" style={styles.buttonStyle} />
       </Link>
-      <Link to={'/about-me'}>
-        <FlatButton label="About Me" style={styles.buttonStyle} />
+      <Link to={'/posts'}>
+        <FlatButton label="Blog" style={styles.buttonStyle} />
       </Link>
     </div>
   )

@@ -7,23 +7,23 @@ class PostList extends Component {
   constructor(props) {
     super()
   }
-  
+
   render() {
     const posts = this.props.posts
-    let postsArray = []
+    const postsArray = []
 
-    for (let key in posts) {
+    for (const key in posts) {
       postsArray.push(posts[key])
     }
-    
+
     return (
       <div id="post-list">
         {postsArray.map(post => {
-            return (
-              <div key={post.key} className="post-card">
-                <PostCard post={post}/>
-              </div>
-            )
+          return (
+            <div key={post.key} className="post-card">
+              <PostCard post={post}/>
+            </div>
+          )
         })}
       </div>
     )
