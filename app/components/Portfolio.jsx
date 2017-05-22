@@ -4,8 +4,8 @@ import React from 'react'
 // i add projects as they come along and redeploy
 // an option for future development would be to make the left and right components their own components and to just pass the project down as props
 
-const Projects = () => (
-    <div>
+const Portfolio = () => (
+    <div className="portfolio-container">
       <div className="outer">
         <div className="inner scroll-img" id="sandcastle">Sandcastle Video</div>
         <div className="inner static-color">
@@ -64,4 +64,4 @@ const Projects = () => (
     </div>
   )
 
-export default Projects
+export default Portfolio

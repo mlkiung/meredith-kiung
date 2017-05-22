@@ -20,9 +20,8 @@ import NewPost from 'APP/app/containers/NewPost'
 import Navbar from 'APP/app/components/Navbar'
 import PostList from 'APP/app/components/PostList'
 import PostCard from 'APP/app/components/PostCard'
-import Post from 'APP/app/components/Post'
 import AboutMe from 'APP/app/components/AboutMe'
-import Projects from 'APP/app/components/Projects'
+import Portfolio from 'APP/app/components/Portfolio'
 
 const onAppEnter = () => {
   firebase.database().ref('/posts').on('value', snap => {
@@ -55,9 +54,8 @@ render(
         <IndexRedirect to="/home"/>
         <Route path="/home" component={AboutMe} />
         <Route path="/posts" component={PostList} />
-        <Route path="/posts/:postKey" component={Post} onEnter={onPostEnter} />
         <Route path="/about-me" component={AboutMe} />
-        <Route path="/projects" component={Projects} />
+        <Route path="/portfolio" component={Portfolio} />
         <Route path="/newpost" component={NewPost} />
       </Route>
       <Route path='*' component={NotFound}/>
