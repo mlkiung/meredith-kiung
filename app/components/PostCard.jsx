@@ -20,14 +20,17 @@ class PostCard extends Component {
           onExpandChange={expanded => this.setState({ expanded })}
           >
           <CardMedia>
-            <img className="img-postcard" src={'/images/sandcastle.png'} />
+            <img
+              className="img-postcard"
+              src={'/images/sandcastle.png'}
+              />
           </CardMedia>
           <CardTitle
-                title={this.props.post.title}
-                subtitle={this.props.post.tags}
-                actAsExpander={true}
-                showExpandableButton={true}
-              />
+            title={this.props.post.title}
+            subtitle={this.props.post.tags}
+            actAsExpander={true}
+            showExpandableButton={true}
+            />
           <CardText expandable={true}>{this.props.post.content}</CardText>
         </Card>
       </div>
