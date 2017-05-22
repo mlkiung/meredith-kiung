@@ -8,7 +8,6 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import AppBar from 'material-ui/AppBar';
 
 import NotFound from './components/NotFound'
 
@@ -32,9 +31,7 @@ const onAppEnter = () => {
 }
 
 const onPostEnter = (props) => {
-//  console.log('props', props)
   firebase.database().ref(`/posts/${props.params.postKey}`).on('value', snap => {
-//    console.log('snap', snap.val())
     store.dispatch(loadPost(snap.val()))
   })
 }
@@ -42,13 +39,12 @@ const onPostEnter = (props) => {
 const App = ({children}) =>
   <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
     <div>
-      <AppBar />
       <Navbar />
       {children}
     </div>
   </MuiThemeProvider>
 
-injectTapEventPlugin();
+injectTapEventPlugin()
 
 render(
   <Provider store={store}>
