@@ -1,11 +1,10 @@
 import React from 'react'
 
-//this is a static page, essentially
-//i add projects as they come along and redeploy
-//an option for future development would be to make the left and right components their own components and to just pass the project down as props
+// this is a static page, essentially
+// i add projects as they come along and redeploy
+// an option for future development would be to make the left and right components their own components and to just pass the project down as props
 
-const Projects = () => {
-  return (
+const Projects = () => (
     <div>
       <div className="outer">
         <div className="inner scroll-img" id="sandcastle">Sandcastle Video</div>
@@ -64,6 +63,5 @@ const Projects = () => {
       </div>
     </div>
   )
-}
 
 export default Projects

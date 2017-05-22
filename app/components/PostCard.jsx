@@ -12,7 +12,6 @@ class PostCard extends Component {
   }
 
   render() {
-    console.log('props in PostCard', this.props)
     return (
       <div>
         <Card
