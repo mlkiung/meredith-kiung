@@ -26,7 +26,6 @@ import AboutMe from 'APP/app/components/AboutMe'
 import Projects from 'APP/app/components/Projects'
 
 const onAppEnter = () => {
-  injectTapEventPlugin();
   firebase.database().ref('/posts').on('value', snap => {
     store.dispatch(loadAllPosts(snap.val()))
   })
@@ -48,6 +47,8 @@ const App = ({children}) =>
       {children}
     </div>
   </MuiThemeProvider>
+
+injectTapEventPlugin();
 
 render(
   <Provider store={store}>
