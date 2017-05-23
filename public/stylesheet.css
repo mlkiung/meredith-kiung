@@ -12,14 +12,10 @@ fonts {
   font-family: 'Open Sans Condensed', sans-serif;
   font-family: 'Rajdhani', sans-serif;
   font-family: 'Raleway Dots', cursive;
+  font-family: 'Questrial', sans-serif;
 }
 */
 
-/*
-image links {
-  http://hdwallpapersbuzz.com/wp-content/uploads/2017/03/4k-wallpaper-reddit-images-31.jpg
-}
-*/
 
 .btn-submit {
 	margin-left: 5px;
@@ -34,14 +30,34 @@ image links {
   max-width: 800px;
 }
 
-/*.about-me-inner {
+.about-me-inner {
   display: flex;
-}*/
+  justify-content: center;
+}
+
+#avatar {
+  border-radius: 50%;
+  height: 65%;
+  width: 65%;
+
+}
+
+.font-heading {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em;
+}
+
+.font-body {
+  font-family: 'Rajdhani', sans-serif;
+  margin: 1em;
+}
 
 #app-body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #3f3250;
 }
 
 #post-list {
@@ -62,6 +78,10 @@ image links {
   height: 500px;
   flex-grow: 1;
 }*/
+
+.container {
+  max-width: 1000px;
+}
 
 .breadcrumb {
   margin-bottom: 0px;
@@ -111,7 +131,7 @@ fieldset {
 }
 
 .static-color {
-  background-color: #3f3250;
+  background-color: #d1d3d8;
 }
 
 #sandcastle {
@@ -136,11 +156,12 @@ fieldset {
 }
 
 .font-middle-body {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Questrial', sans-serif;
   font-size: 16px;
   text-align: left;
   vertical-align: top;
-  height: 50%
+  height: 50%;
+  color: black;
 }
 
 .middle-header {
@@ -148,11 +169,12 @@ fieldset {
 }
 
 .font-middle-header {
-  font-family: 'Nixie One', cursive;
+  font-family: 'Questrial', sans-serif;
   font-size: 33px;
-  text-align: center;
+  text-align: left;
   height: 50%;
   margin-top: 25%;
+  color: black;
 }
 
 .color-stormy {
@@ -172,7 +194,7 @@ fieldset {
 }
 
 .font-sans {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Questrial', sans-serif;
 }
 
 .font-serif {
@@ -211,3 +233,11 @@ input {
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
   box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
+body {
+   background-color: #3f3250;
+ }
+
+hr {
+   border-color: black;
+   border: 2px solid;
+ }

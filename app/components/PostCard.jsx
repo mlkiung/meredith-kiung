@@ -13,7 +13,7 @@ class PostCard extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <Card
           expanded={this.state.expanded}
           onExpandChange={expanded => this.setState({ expanded })}
@@ -21,16 +21,17 @@ class PostCard extends Component {
           <CardMedia>
             <img
               className="img-postcard"
-              src={'/images/sandcastle.png'}
+              src={'http://placehold.it/350x150'}
               />
           </CardMedia>
           <CardTitle
+            className="font-heading font-sans"
             title={this.props.post.title}
             subtitle={this.props.post.tags}
             actAsExpander={true}
             showExpandableButton={true}
             />
-          <CardText expandable={true}>{this.props.post.content}</CardText>
+          <CardText className="font-body" expandable={true}>{this.props.post.content}</CardText>
         </Card>
       </div>
     )

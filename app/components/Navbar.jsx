@@ -9,6 +9,7 @@ const NavBar = () => {
     buttonStyle: {
       backgroundColor: 'transparent',
       color: 'white',
+      'font-family': "'Questrial', sans-serif"
     },
   }
 
