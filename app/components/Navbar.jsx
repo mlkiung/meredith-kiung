@@ -9,8 +9,11 @@ const NavBar = () => {
     buttonStyle: {
       backgroundColor: 'transparent',
       color: 'white',
-      'font-family': "'Questrial', sans-serif"
+      'font-family': "'Questrial', sans-serif",
     },
+    labelStyle: {
+      'font-size': '40px'
+    }
   }
 
   const rightButtons = (
@@ -24,10 +27,11 @@ const NavBar = () => {
     </div>
   )
 
+  const buttonStyle = styles.buttonStyle
   const leftButtons = (
     <div>
       <Link to={'/'}>
-        <FlatButton label="Bear Gets Digital" style={styles.buttonStyle} />
+        <FlatButton label="Meredith Kiung" style={Object.assign({ buttonStyle }, { 'font-family': "'Alfa Slab One', cursive" })} />
       </Link>
     </div>
   )
@@ -35,6 +39,7 @@ const NavBar = () => {
   return (
     <div>
       <AppBar
+        id="app-bar"
         iconElementRight={rightButtons}
         iconElementLeft={leftButtons}
       />

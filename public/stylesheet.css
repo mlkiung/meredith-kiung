@@ -13,6 +13,7 @@ fonts {
   font-family: 'Rajdhani', sans-serif;
   font-family: 'Raleway Dots', cursive;
   font-family: 'Questrial', sans-serif;
+  font-family: 'Alfa Slab One', cursive;
 }
 */
 
@@ -233,11 +234,16 @@ input {
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
   box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
-body {
-   background-color: #3f3250;
- }
 
 hr {
    border-color: black;
    border: 2px solid;
  }
+
+#app-bar {
+  padding-top: 10px;
+}
+
+body {
+  background-color: black;
+}
