@@ -9,10 +9,7 @@ const NavBar = () => {
     buttonStyle: {
       backgroundColor: 'transparent',
       color: 'white',
-      'font-family': "'Questrial', sans-serif",
-    },
-    labelStyle: {
-      'font-size': '40px'
+      fontFamily: "'Questrial', sans-serif",
     }
   }
 
@@ -31,7 +28,10 @@ const NavBar = () => {
   const leftButtons = (
     <div>
       <Link to={'/'}>
-        <FlatButton label="Meredith Kiung" style={Object.assign({ buttonStyle }, { 'font-family': "'Alfa Slab One', cursive" })} />
+        <FlatButton
+          label="Meredith Kiung"
+          labelStyle={{fontSize: '1.5em'}}
+          style={Object.assign({ buttonStyle }, {fontFamily: "'Alfa Slab One', cursive"})} />
       </Link>
     </div>
   )

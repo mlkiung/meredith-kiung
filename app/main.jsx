@@ -14,7 +14,7 @@ import NotFound from './components/NotFound'
 import firebase from 'APP/fire'
 
 import store from './store'
-import { loadAllPosts, getAllPosts, loadPost } from 'APP/app/redux/action-creators'
+import { loadAllPosts, loadAllProjects } from 'APP/app/redux/action-creators'
 
 import NewPost from 'APP/app/containers/NewPost'
 import Navbar from 'APP/app/components/Navbar'
@@ -22,6 +22,7 @@ import PostList from 'APP/app/components/PostList'
 import PostCard from 'APP/app/components/PostCard'
 import AboutMe from 'APP/app/components/AboutMe'
 import Portfolio from 'APP/app/components/Portfolio'
+import NewProject from 'APP/app/containers/NewProject'
 
 const onAppEnter = () => {
   firebase.database().ref('/posts').on('value', snap => {
@@ -29,9 +30,9 @@ const onAppEnter = () => {
   })
 }
 
-const onPostEnter = (props) => {
-  firebase.database().ref(`/posts/${props.params.postKey}`).on('value', snap => {
-    store.dispatch(loadPost(snap.val()))
+const onPortfolioEnter = () => {
+  firebase.database().ref('/portfolio').on('value', snap => {
+    store.dispatch(loadAllProjects(snap.val()))
   })
 }
 
@@ -57,6 +58,7 @@ render(
         <Route path="/about-me" component={AboutMe} />
         <Route path="/portfolio" component={Portfolio} />
         <Route path="/newpost" component={NewPost} />
+        <Route path="/newproject" component={NewProject} />
       </Route>
       <Route path='*' component={NotFound}/>
     </Router>

@@ -11,7 +11,7 @@ const posts = (state = initialState, action) => {
 
     case GET_ALL_POSTS:
       return action.posts
-      
+
     case GET_A_POST:
       return action.post
 

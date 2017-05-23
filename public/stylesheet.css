@@ -58,7 +58,7 @@ fonts {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #3f3250;
+  background-color: white;
 }
 
 #post-list {
@@ -178,14 +178,6 @@ fieldset {
   color: black;
 }
 
-.color-stormy {
-  background-color: #494E6B;
-}
-
-.font-cloudy {
-  color: #98878F;
-}
-
 .no-margin: {
   margin: 0px;
 }
@@ -200,15 +192,6 @@ fieldset {
 
 .font-serif {
   font-family: 'Nixie One', cursive;
-}
-
-input:focus {
-  outline-offset: -2px;
-  outline: -webkit-focus-ring-color auto 0px;
-}
-
-:focus {
-  outline: -webkit-focus-ring-color auto 3px;
 }
 
 input {
@@ -244,6 +227,22 @@ hr {
   padding-top: 10px;
 }
 
-body {
-  background-color: black;
+#new-project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.new-project-form-label {
+  margin: 1em;
+}
+
+.new-project-input {
+  margin-left: 1em;
 }

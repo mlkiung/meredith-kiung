@@ -1,13 +1,12 @@
 import firebase from 'firebase'
 
 import posts from '../reducers/newPostReducer'
-import { GET_A_POST, GET_ALL_POSTS } from '../constants'
+import { GET_A_POST, GET_ALL_POSTS, GET_ALL_PROJECTS } from '../constants'
 
 const db = firebase.database().ref('/')
 const postsRef = db.child('posts')
-console.log('ROOT', postsRef)
-// const allPosts = postsRef.on('value', snap => snap.val())
-// console.log('allPosts', allPosts())
+const projectsRef = db.child('projects')
+
 
 // addNewPost simply adds a new post to the database
 export const addNewPost = (post) => {
@@ -18,7 +17,7 @@ export const addNewPost = (post) => {
 }
 
 // getPost gets a single post and loads it to state
-export const getPost = post => {
+export const getPost = (post) => {
   dispatch =>
     postsRef.on('child-added', snap => {
       loadPost(snap.val())
@@ -40,7 +39,27 @@ export const getAllPosts = () => {
   })
 }
 
-export const loadAllPosts = posts => ({
+export const loadAllPosts = (posts) => ({
   type: GET_ALL_POSTS,
   posts: posts
+})
+
+export const addNewProject = (project) => {
+  console.log('PROJECT', project)
+  const newProjectKeyRef = projectsRef.push()
+  const newProjectKey = newProjectKeyRef.key
+  newProjectKeyRef.set({
+    key: newProjectKey,
+    title: project.title,
+    description: project.description,
+    technologies: project.technologies,
+    github: project.github,
+    website: project.website,
+    images: project.images,
+  })
+}
+
+export const loadAllProjects = (projects) => ({
+  type: GET_ALL_PROJECTS,
+  projects: projects
 })
