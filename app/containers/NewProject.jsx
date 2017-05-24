@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { browserHistory } from 'react-router'
 
 import SelectField from 'material-ui/SelectField'
 import MenuItem from 'material-ui/MenuItem'
@@ -20,23 +21,19 @@ const _technologies = [
 ]
 
 class NewProject extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      technologies: [],
-      title: '',
-      description: '',
-      github: '',
-      website: '',
-      images: [],
-    }
-
-    this.handleInputChange = this.handleInputChange.bind(this)
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.menuItems = this.menuItems.bind(this)
+  state = {
+    technologies: [],
+    title: '',
+    description: '',
+    github: '',
+    website: '',
+    images: [],
   }
+    // this.handleInputChange = this.handleInputChange.bind(this)
+    // this.handleChange = this.handleChange.bind(this)
+    // this.handleSubmit = this.handleSubmit.bind(this)
+    // this.menuItems = this.menuItems.bind(this)
+  // }
 
   handleInputChange = (event) => {
     const name = event.target.name
@@ -53,23 +50,23 @@ class NewProject extends Component {
     event.preventDefault()
     const project = this.state
     this.props.addNewProject(project)
+    browserHistory.push('/portfolio')
   }
 
   menuItems = (technologies) => {
-    console.log('technologies in menuItems', technologies)
-    return _technologies.map(_technology => {
+    return _technologies.map(_technology => (
       <MenuItem
         key={_technology}
         insetChildren={true}
         checked={technologies && technologies.indexOf(_technology) > -1}
         value={_technology}
         primaryText={_technology} />
-    })
+    ))
   }
 
   render() {
     const technologies = this.state.technologies
-    console.log('technologies in render', technologies)
+
     return (
       <div id="new-project-container">
         <form className="form-column">

@@ -28,10 +28,8 @@ const onAppEnter = () => {
   firebase.database().ref('/posts').on('value', snap => {
     store.dispatch(loadAllPosts(snap.val()))
   })
-}
 
-const onPortfolioEnter = () => {
-  firebase.database().ref('/portfolio').on('value', snap => {
+  firebase.database().ref('/projects').on('value', snap => {
     store.dispatch(loadAllProjects(snap.val()))
   })
 }

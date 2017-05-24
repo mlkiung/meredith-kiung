@@ -135,16 +135,6 @@ fieldset {
   background-color: #d1d3d8;
 }
 
-#sandcastle {
-/*  background-image: url('images/sandcastle.png')*/
-  background-image: url('images/maxresdefault.jpg')
-}
-
-#ifoodie {
-/*  background-image: url('images/ifoodie.png')*/
-  background-image: url('images/maxresdefault.jpg')
-}
-
 .one-third {
   display: flex;
   flex-direction: column;

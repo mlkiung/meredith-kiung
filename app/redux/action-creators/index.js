@@ -1,51 +1,30 @@
 import firebase from 'firebase'
 
+import store from 'APP/app/store'
 import posts from '../reducers/newPostReducer'
+import projects from '../reducers/projectsReducer'
 import { GET_A_POST, GET_ALL_POSTS, GET_ALL_PROJECTS } from '../constants'
 
 const db = firebase.database().ref('/')
 const postsRef = db.child('posts')
 const projectsRef = db.child('projects')
 
-
-// addNewPost simply adds a new post to the database
+// POSTS
 export const addNewPost = (post) => {
   const newPostKeyRef = postsRef.push()
   const newPostKey = newPostKeyRef.key
-  console.log('newPostKey', newPostKey)
   newPostKeyRef.set({key: newPostKey, title: post.title, content: post.content, tags: post.tags})
 }
 
-// getPost gets a single post and loads it to state
-export const getPost = (post) => {
-  dispatch =>
-    postsRef.on('child-added', snap => {
-      loadPost(snap.val())
-    })
-}
+export const loadAllPosts = (posts) => receiveAllPosts(posts)
 
-export const loadPost = (post) => ({
-  type: GET_A_POST,
-  post
-})
-
-// getAllPosts updates the posts object every time a new post is added
-export const getAllPosts = () => {
-  postsRef.once('value').then(snap => {
-    // dispatch(loadAllPosts(snap.val()))
-    const posts = snap.val()
-    console.log('posts2', posts)
-    dispatch(loadAllPosts(posts))
-  })
-}
-
-export const loadAllPosts = (posts) => ({
+const receiveAllPosts = (posts) => ({
   type: GET_ALL_POSTS,
-  posts: posts
+  posts
 })
 
+// PROJECTS
 export const addNewProject = (project) => {
-  console.log('PROJECT', project)
   const newProjectKeyRef = projectsRef.push()
   const newProjectKey = newProjectKeyRef.key
   newProjectKeyRef.set({
@@ -59,7 +38,15 @@ export const addNewProject = (project) => {
   })
 }
 
-export const loadAllProjects = (projects) => ({
+export const loadAllProjects = (projects) => receiveAllProjects(projects)
+
+// export const loadAllProjects = () => {
+//   projectsRef.on('value', snap => {
+//     store.dispatch(receiveAllProjects(snap.val()))
+//   })
+// }
+
+const receiveAllProjects = (projects) => ({
   type: GET_ALL_PROJECTS,
-  projects: projects
+  projects
 })
