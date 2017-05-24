@@ -1,11 +1,4 @@
 /*
-colors {
-  494E6B - dark blue
-  98878F - cloudy
-  985E6D - sunset
-  192231 - evening
-}
-
 fonts {
   font-family: 'Nixie One', cursive;
   font-family: 'Cutive Mono', monospace;
@@ -16,11 +9,6 @@ fonts {
   font-family: 'Alfa Slab One', cursive;
 }
 */
-
-
-.btn-submit {
-	margin-left: 5px;
-}
 
 .about-me-outer {
 	margin: 5%;
@@ -40,7 +28,6 @@ fonts {
   border-radius: 50%;
   height: 65%;
   width: 65%;
-
 }
 
 .font-heading {
@@ -94,10 +81,10 @@ fonts {
   margin-bottom: 5px;
 }
 
-fieldset {
+/*fieldset {
   margin-left: 10px;
   margin-right: 10px;
-}
+}*/
 
 .portfolio-container {
   width: 100%;
@@ -169,10 +156,6 @@ fieldset {
   color: black;
 }
 
-.no-margin: {
-  margin: 0px;
-}
-
 .font-mono {
   font-family: 'Cutive Mono', monospace;
 }
@@ -185,28 +168,13 @@ fieldset {
   font-family: 'Nixie One', cursive;
 }
 
-input {
+/*input {
   background-color: white;
   opacity: 0.5;
-}
-
-.panel-body {
-  height: 400px;
-  overflow: scroll;
-  padding: 15px;
-}
+}*/
 
 #post-card-no-border {
   border: none;
-}
-
-.panel {
-  margin-bottom: 0px;
-  background-color: #ffffff;
-/*  border: 1px solid transparent;*/
-  /* border-radius: 4px; */
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
 }
 
 hr {
