@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import firebase from 'APP/fire'
 
 import store from 'APP/app/store'
-import {loadAllProjects} from 'APP/app/redux/action-creators'
+import { loadAllProjects } from 'APP/app/redux/action-creators'
 
 import { PortfolioCardRight, PortfolioCardLeft } from './PortfolioCard'
 
@@ -12,12 +12,19 @@ class Portfolio extends Component {
     super(props)
 
     this.state = {
-      counter: 0,
       projects: [],
     }
 
     this.rightOrLeft = this.rightOrLeft.bind(this)
     this.makeProjectsArray = this.makeProjectsArray.bind(this)
+  }
+
+  componentDidMount() {
+    const projectsArr = this.makeProjectsArray(this.props.projects)
+    const projectsComponents = projectsArr.map((project, i) => {
+      return this.rightOrLeft(project, i)
+    })
+    this.setState({projects: projectsComponents})
   }
 
   componentWillReceiveProps(nextProps) {
