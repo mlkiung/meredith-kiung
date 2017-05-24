@@ -13,22 +13,32 @@ class Portfolio extends Component {
 
     this.state = {
       counter: 0,
-      projects: this.makeProjectsArray(this.props.projects),
+      projects: [],
     }
 
     // this.makeProjectsArray(this.props.projects)
 
     this.rightOrLeft = this.rightOrLeft.bind(this)
     this.makeProjectsArray = this.makeProjectsArray.bind(this)
+    // this.renderProject = this.renderProject.bind(this)
   }
 
-  rightOrLeft = (project) => {
-    console.log(this.state.projects)
-    let counter = this.state.counter
-    counter++
-    this.setState({ counter })
-    console.log('counter', this.state.counter)
-    return counter % 2 === 0 ? <PortfolioCardRight project={project} /> : <PortfolioCardLeft project={project} />
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.projects !== this.props.projects) {
+      const projectsArr = this.makeProjectsArray(nextProps.projects)
+      const projectsComponents = projectsArr.map((project, i) => {
+        return this.rightOrLeft(project, i)
+      })
+      this.setState({projects: projectsComponents})
+    }
+  }
+
+  rightOrLeft = (project, i) => {
+    if (i % 2 === 0 || i === 0) {
+      return <PortfolioCardRight project={project} key={project.key} />
+    } else {
+      return <PortfolioCardLeft project={project} key={project.key} />
+    }
   }
 
   makeProjectsArray = (projects) => {
@@ -36,23 +46,29 @@ class Portfolio extends Component {
     for (const key in projects) {
       projectsArr.push(projects[key])
     }
-    console.log('PROJECTS ARRAY', projectsArr)
     return projectsArr
-    // this.setState({projects: projectsArr})
   }
+
+  // renderProject = (projects) => {
+  //   projects && projects.map((project) => {
+  //     // return this.rightOrLeft(project)
+  //     return <PortfolioCardRight project={project} />
+  //   })
+  // }
 
   render() {
     const projects = this.state.projects
-    console.log('FUCKING PROJECTS', this.state.projects)
-    console.log(this.props)
 
     return (
       <div className="portfolio-container">
 
-        {projects && projects.map((project) => {
+        {/*projects && projects.map((project) => {
           console.log('PROJECT', project)
-          return this.rightOrLeft(project)
-        })}
+          // return this.rightOrLeft(project)
+          return <PortfolioCardRight project={project} key={project.key} />
+        })*/}
+
+        {this.state.projects}
 
       </div>
 
