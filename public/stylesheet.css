@@ -49,30 +49,17 @@ fonts {
 }
 
 #post-list {
-  margin: 5%;
+  margin-top: 2em;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
 }
 
 .post-card {
-  margin: 2%;
-  /*display: flex;
-  flex-grow: 1;*/
+  margin-bottom: 2em;
 }
-
-/*#PostCard {
-  width: 100%;
-  height: 500px;
-  flex-grow: 1;
-}*/
 
 .container {
-  max-width: 1000px;
-}
-
-.breadcrumb {
-  margin-bottom: 0px;
+  max-width: 1200px;
 }
 
 #tags-color {
@@ -80,11 +67,6 @@ fonts {
   font-size: 13px;
   margin-bottom: 5px;
 }
-
-/*fieldset {
-  margin-left: 10px;
-  margin-right: 10px;
-}*/
 
 .portfolio-container {
   width: 100%;
