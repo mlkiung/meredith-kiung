@@ -139,18 +139,19 @@ fieldset {
   display: flex;
   flex-direction: column;
   align-content: center;
+  width: 66%;
 }
 
 .middle {
-  width: 33%;
+  /*width: 33%;*/
   justify-content: center;
 }
 
 .font-middle-body {
   font-family: 'Questrial', sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   text-align: left;
-  vertical-align: top;
+  /*vertical-align: top;*/
   height: 50%;
   color: black;
 }
@@ -163,7 +164,7 @@ fieldset {
   font-family: 'Questrial', sans-serif;
   font-size: 33px;
   text-align: left;
-  height: 50%;
+  height: 25%;
   margin-top: 25%;
   color: black;
 }
