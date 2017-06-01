@@ -17,6 +17,14 @@ class Portfolio extends Component {
     this.makeProjectsArray = this.makeProjectsArray.bind(this)
   }
 
+  componentDidMount = () => {
+    const projectsArr = this.makeProjectsArray(this.props.projects)
+    const projectsComponents = projectsArr.map((project) => {
+      return <PortfolioCard project = {project} key={project.key} />
+    })
+    this.setState({projects: projectsComponents})
+  }
+
   componentWillReceiveProps = (nextProps) => {
     if (nextProps.projects !== this.props.projects) {
       const projectsArr = this.makeProjectsArray(nextProps.projects)

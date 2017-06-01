@@ -30,8 +30,10 @@ const PortfolioCard = (props) => {
                   <span key={i} className="technologies">{technology}</span>
                 )
               })}
-            </div>
-            {project.description}
+						</div>
+						<div className="description-container">
+							{project.description}
+						</div>
         		<ImageModal project={project} />
           </div>
         </div>}

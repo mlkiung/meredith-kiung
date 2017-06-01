@@ -131,6 +131,7 @@ fonts {
   /*width: 33%;*/
   justify-content: center;
 	align-items: flex-start;
+	padding: 2em;
 }
 
 .font-middle-body {
@@ -140,10 +141,13 @@ fonts {
   /*vertical-align: top;*/
   height: 50%;
   color: black;
+	width: inherit;
+	padding-right: 4.55em;
 }
 
 .middle-header {
   display: flex;
+	width: 50em;
 }
 
 .font-middle-header {
@@ -153,6 +157,8 @@ fonts {
   height: 25%;
   /*margin-top: 25%;*/
   color: black;
+	width: inherit;
+	padding-right: 2em;
 }
 
 .font-mono {
@@ -174,6 +180,7 @@ fonts {
 hr {
    border-color: black;
    border: 2px solid;
+	 margin-top: .3em;
  }
 
 #app-bar {
@@ -225,6 +232,10 @@ a:hover {
 }
 
 .technologies-container {
+	margin-bottom: 1em;
+}
+
+.description-container {
 	margin-bottom: 1em;
 }
 

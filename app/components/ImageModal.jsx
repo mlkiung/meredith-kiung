@@ -39,7 +39,13 @@ class ImageModal extends Component {
 
     return (
       <div>
-        <RaisedButton id="raised-button" label="Modal Dialog" onTouchTap={this.handleOpen} />
+        <FlatButton
+          id="raised-button"
+          label="View Images"
+          onTouchTap={this.handleOpen}
+          fullWidth={true}
+          style={style}
+          />
         <Dialog
           title="Think of a Title"
           actions={actions}
@@ -54,3 +60,7 @@ class ImageModal extends Component {
 }
 
 export default ImageModal
+
+const style = {
+  opacity: '50%',
+}
