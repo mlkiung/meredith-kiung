@@ -5,13 +5,13 @@ import ImageModal from 'APP/app/components/ImageModal'
 
 const PortfolioCard = (props) => {
   const project = props.project
-  const images = project.images
   const technologies = project.technologies
   const github = project.github
   const website = project.website
-  const modalKey = project.key
 
-	AOS.init()
+  console.log('props in PortfolioCard', props)
+
+  AOS.init()
 
   return (
     <div className="outer">
@@ -30,11 +30,11 @@ const PortfolioCard = (props) => {
                   <span key={i} className="technologies">{technology}</span>
                 )
               })}
-						</div>
-						<div className="description-container">
-							{project.description}
-						</div>
-        		<ImageModal project={project} />
+            </div>
+            <div className="description-container">
+              {project.description}
+            </div>
+            <ImageModal project={project} />
           </div>
         </div>}
       </div>

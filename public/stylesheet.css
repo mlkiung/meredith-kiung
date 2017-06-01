@@ -103,21 +103,10 @@ fonts {
   border-color: gray;
   border-width: 5px;
   background-color: #d1d3d8;
-	/*background-image: url('https://images5.alphacoders.com/568/568653.jpg');*/
 }
-
-/*.inner-logo {
-	flex-grow: 1;
-	display: flex;
-}*/
 
 .scroll-img {
   background-image: url('https://images5.alphacoders.com/568/568653.jpg');
-  /*background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  overflow: hidden;*/
 }
 
 .one-third {
@@ -128,7 +117,6 @@ fonts {
 }
 
 .middle {
-  /*width: 33%;*/
   justify-content: center;
 	align-items: flex-start;
 	padding: 2em;
@@ -138,7 +126,6 @@ fonts {
   font-family: 'Questrial', sans-serif;
   font-size: 1em;
   text-align: left;
-  /*vertical-align: top;*/
   height: 50%;
   color: black;
 	width: inherit;
@@ -155,7 +142,6 @@ fonts {
   font-size: 33px;
   text-align: left;
   height: 25%;
-  /*margin-top: 25%;*/
   color: black;
 	width: inherit;
 	padding-right: 2em;

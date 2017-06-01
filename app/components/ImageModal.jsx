@@ -35,13 +35,12 @@ class ImageModal extends Component {
     ]
 
     const images = this.props.project.images
-    // images is an array
 
     return (
       <div>
         <FlatButton
           id="raised-button"
-          label="View Images"
+          label={`View ${this.props.project.title}`}
           onTouchTap={this.handleOpen}
           fullWidth={true}
           style={style}
@@ -62,5 +61,5 @@ class ImageModal extends Component {
 export default ImageModal
 
 const style = {
-  opacity: '50%',
+  fontFamily: "'Questrial', sans-serif"
 }
