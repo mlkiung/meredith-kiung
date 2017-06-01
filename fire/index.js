@@ -2,12 +2,12 @@ const firebase = require('firebase')
 
 // -- // -- // -- // Firebase Config // -- // -- // -- //
 const config = {
-  apiKey: 'AIzaSyA9UT4z0XIS8IOD1VzO5Z2C64McfwaCaCU',
-  authDomain: 'bear-gets-digital.firebaseapp.com',
-  databaseURL: 'https://bear-gets-digital.firebaseio.com',
-  projectId: 'bear-gets-digital',
-  storageBucket: 'bear-gets-digital.appspot.com',
-  messagingSenderId: '309686017427'
+  apiKey: 'AIzaSyC3Cfb6J5naNuMVvnK45NisB42kB-vsVKc',
+  authDomain: 'meredithkiung-45dcc.firebaseapp.com',
+  databaseURL: 'https://meredithkiung-45dcc.firebaseio.com',
+  projectId: 'meredithkiung-45dcc',
+  storageBucket: 'meredithkiung-45dcc.appspot.com',
+  messagingSenderId: '750184202416'
 }
 // -- // -- // -- // -- // -- // -- // -- // -- // -- //
 
