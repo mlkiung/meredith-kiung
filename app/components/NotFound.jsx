@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-const NotFound = props => {
+const NotFound = (props) => {
   const {pathname} = props.location || {pathname: '<< no path >>'}
   console.error('NotFound: %s not found (%o)', pathname, props)
   return (
@@ -12,7 +12,7 @@ const NotFound = props => {
         {JSON.stringify(props, null, 2)}
       </pre>
       <p>Lost? <Link to="/">Here's a way home.</Link></p>
-      <cite>~ xoxo, bones.</cite>
+      <cite>~ xoxo, Meredith.</cite>
     </div>
   )
 }

@@ -13,18 +13,19 @@ const NavBar = () => {
     }
   }
 
+  const buttonStyle = styles.buttonStyle
+
   const rightButtons = (
     <div>
       <Link to={'/portfolio'}>
-        <FlatButton label="Portfolio" style={styles.buttonStyle} />
+        <FlatButton label="Portfolio" style={buttonStyle} />
       </Link>
       <Link to={'/posts'}>
-        <FlatButton label="Blog" style={styles.buttonStyle} />
+        <FlatButton label="Blog" style={buttonStyle} />
       </Link>
     </div>
   )
 
-  const buttonStyle = styles.buttonStyle
   const leftButtons = (
     <div>
       <Link to={'/'}>

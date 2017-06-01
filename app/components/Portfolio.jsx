@@ -3,9 +3,8 @@ import { connect } from 'react-redux'
 import firebase from 'APP/fire'
 
 import store from 'APP/app/store'
-import { loadAllProjects } from 'APP/app/redux/action-creators'
 
-import { PortfolioCardRight, PortfolioCardLeft } from './PortfolioCard'
+import PortfolioCard from 'APP/app/components/PortfolioCard'
 
 class Portfolio extends Component {
   constructor(props) {
@@ -15,33 +14,16 @@ class Portfolio extends Component {
       projects: [],
     }
 
-    this.rightOrLeft = this.rightOrLeft.bind(this)
     this.makeProjectsArray = this.makeProjectsArray.bind(this)
   }
 
-  componentDidMount() {
-    const projectsArr = this.makeProjectsArray(this.props.projects)
-    const projectsComponents = projectsArr.map((project, i) => {
-      return this.rightOrLeft(project, i)
-    })
-    this.setState({projects: projectsComponents})
-  }
-
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps = (nextProps) => {
     if (nextProps.projects !== this.props.projects) {
       const projectsArr = this.makeProjectsArray(nextProps.projects)
-      const projectsComponents = projectsArr.map((project, i) => {
-        return this.rightOrLeft(project, i)
+			const projectsComponents = projectsArr.map((project) => {
+				return <PortfolioCard project = {project} key={project.key} />
       })
       this.setState({projects: projectsComponents})
-    }
-  }
-
-  rightOrLeft = (project, i) => {
-    if (i % 2 === 0 || i === 0) {
-      return <PortfolioCardRight project={project} key={project.key} />
-    } else {
-      return <PortfolioCardLeft project={project} key={project.key} />
     }
   }
 
@@ -64,6 +46,4 @@ class Portfolio extends Component {
 
 const mapStateToProps = state => ({projects: state.projects})
 
-const mapDispatchToProps = dispatch => ({ loadAllProjects })
-
-export default connect(mapStateToProps, mapDispatchToProps)(Portfolio)
+export default connect(mapStateToProps)(Portfolio)

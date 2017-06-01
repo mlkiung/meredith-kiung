@@ -33,7 +33,7 @@ fonts {
 .font-heading {
   font-size: 2em;
   font-weight: bold;
-  margin: 1em;
+  margin-top: 1em;
 }
 
 .font-body {
@@ -52,6 +52,7 @@ fonts {
   margin-top: 2em;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .post-card {
@@ -79,29 +80,44 @@ fonts {
   width: 100%;
 }
 
-.inner {
+.inner-logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 50%;
-  height: 500px;
-  background-size: cover;
+	flex-grow: 1;
+  height: 100vh;
   border-radius: 0px;
   border-color: gray;
   border-width: 5px;
 }
 
-.scroll-img {
-  background-image: url('https://images5.alphacoders.com/568/568653.jpg');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
+.inner-info {
+	display: flex;
+  flex-direction: column;
+  align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 2;
+	height: 100vh;
+  border-radius: 0px;
+  border-color: gray;
+  border-width: 5px;
+  background-color: #d1d3d8;
+	/*background-image: url('https://images5.alphacoders.com/568/568653.jpg');*/
 }
 
-.static-color {
-  background-color: #d1d3d8;
+/*.inner-logo {
+	flex-grow: 1;
+	display: flex;
+}*/
+
+.scroll-img {
+  background-image: url('https://images5.alphacoders.com/568/568653.jpg');
+  /*background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow: hidden;*/
 }
 
 .one-third {
@@ -114,6 +130,7 @@ fonts {
 .middle {
   /*width: 33%;*/
   justify-content: center;
+	align-items: flex-start;
 }
 
 .font-middle-body {
@@ -134,7 +151,7 @@ fonts {
   font-size: 33px;
   text-align: left;
   height: 25%;
-  margin-top: 25%;
+  /*margin-top: 25%;*/
   color: black;
 }
 
@@ -150,11 +167,6 @@ fonts {
   font-family: 'Nixie One', cursive;
 }
 
-/*input {
-  background-color: white;
-  opacity: 0.5;
-}*/
-
 #post-card-no-border {
   border: none;
 }
@@ -166,6 +178,9 @@ hr {
 
 #app-bar {
   padding-top: 10px;
+	position: fixed;
+	top: 0px;
+	z-index: 10;
 }
 
 #new-project-container {
@@ -186,4 +201,34 @@ hr {
 
 .new-project-input {
   margin-left: 1em;
+}
+
+.image-slider-img {
+  padding: 1em;
+}
+
+a {
+  color: gray;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+.about-icons {
+  margin: 0.5em;
+}
+
+.technologies {
+  margin-right: 1em;
+	margin-bottom: 1em;
+}
+
+.technologies-container {
+	margin-bottom: 1em;
+}
+
+#raised-button {
+	color: black;
+
 }

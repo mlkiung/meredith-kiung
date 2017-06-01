@@ -12,6 +12,8 @@ class PostCard extends Component {
   }
 
   render() {
+    const post = this.props.post
+
     return (
       <div className="container">
         <Card
@@ -26,12 +28,12 @@ class PostCard extends Component {
           </CardMedia>
           <CardTitle
             className="font-heading font-sans"
-            title={this.props.post.title}
-            subtitle={this.props.post.tags}
+            title={post.title}
+            subtitle={post.tags}
             actAsExpander={true}
             showExpandableButton={true}
             />
-          <CardText className="font-body" expandable={true}>{this.props.post.content}</CardText>
+          <CardText className="font-body" expandable={true}>{post.content}</CardText>
         </Card>
       </div>
     )

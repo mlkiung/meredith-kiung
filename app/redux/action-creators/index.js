@@ -3,7 +3,7 @@ import firebase from 'firebase'
 import store from 'APP/app/store'
 import posts from '../reducers/newPostReducer'
 import projects from '../reducers/projectsReducer'
-import { GET_A_POST, GET_ALL_POSTS, GET_ALL_PROJECTS } from '../constants'
+import { GET_ALL_POSTS, GET_ALL_PROJECTS } from '../constants'
 
 const db = firebase.database().ref('/')
 const postsRef = db.child('posts')
@@ -39,12 +39,6 @@ export const addNewProject = (project) => {
 }
 
 export const loadAllProjects = (projects) => receiveAllProjects(projects)
-
-// export const loadAllProjects = () => {
-//   projectsRef.on('value', snap => {
-//     store.dispatch(receiveAllProjects(snap.val()))
-//   })
-// }
 
 const receiveAllProjects = (projects) => ({
   type: GET_ALL_PROJECTS,

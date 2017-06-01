@@ -29,20 +29,22 @@ class NewProject extends Component {
     website: '',
     images: [],
   }
-    // this.handleInputChange = this.handleInputChange.bind(this)
-    // this.handleChange = this.handleChange.bind(this)
-    // this.handleSubmit = this.handleSubmit.bind(this)
-    // this.menuItems = this.menuItems.bind(this)
-  // }
 
   handleInputChange = (event) => {
     const name = event.target.name
-    const value = event.target.value
+    let value = event.target.value
+
+    if (name === 'images') {
+      value = value.split(', ').map((val) => {
+        return `images/${val}`
+      })
+      console.log(value)
+    }
 
     this.setState({[name]: value})
   }
 
-  handleChange = (event, index, technologies) => {
+  handleSelect = (event, index, technologies) => {
     this.setState({ technologies })
   }
 
@@ -96,7 +98,7 @@ class NewProject extends Component {
               multiple={true}
               hintText="Select technologies used"
               value={technologies}
-              onChange={this.handleChange} >
+              onChange={this.handleSelect} >
               {this.menuItems(technologies)}
             </SelectField>
           </label>
