@@ -28,9 +28,10 @@ class ImageModal extends Component {
   render() {
     const actions = [
       <FlatButton
-        label="Cancel"
+        label="Close"
         primary={true}
-        onTouchTap={this.handleClose}
+				onTouchTap={this.handleClose}
+				keyboardFocused={true}
         />,
     ]
 
@@ -39,17 +40,18 @@ class ImageModal extends Component {
     return (
       <div>
         <FlatButton
-          id="raised-button"
+          id="flat-button"
           label={`View ${this.props.project.title}`}
           onTouchTap={this.handleOpen}
           fullWidth={true}
-          style={style}
+					style={style}
           />
         <Dialog
-          title="Think of a Title"
+          title={this.props.project.title}
           actions={actions}
-          modal={true}
-          open={this.state.open}
+          modal={false}
+					open={this.state.open}
+					onRequestClose={this.handleClose}
           >
           <ImageSlider images={images} />
         </Dialog>

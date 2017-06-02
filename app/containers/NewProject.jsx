@@ -41,11 +41,10 @@ class NewProject extends Component {
 
     if (name === 'images') {
       value = value.split(', ').map((val) => {
-        let idx = val.indexOf('images/')
+        const idx = val.indexOf('images/')
         return val.slice(idx)
       })
     }
-
     this.setState({[name]: value})
   }
 
