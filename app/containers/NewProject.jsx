@@ -18,6 +18,11 @@ const _technologies = [
   'MongoDB',
   'Firebase',
   'SQL',
+  'Docker',
+  'Mocha/Chai',
+  'Jasmine',
+  'Bootstrap',
+  'Material-UI',
 ]
 
 class NewProject extends Component {
@@ -36,9 +41,9 @@ class NewProject extends Component {
 
     if (name === 'images') {
       value = value.split(', ').map((val) => {
-        return `images/${val}`
+        let idx = val.indexOf('images/')
+        return val.slice(idx)
       })
-      console.log(value)
     }
 
     this.setState({[name]: value})
