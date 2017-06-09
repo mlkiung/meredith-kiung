@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import firebase from 'APP/fire'
 
+import firebase from 'APP/fire'
 import store from 'APP/app/store'
 
 import PortfolioCard from 'APP/app/components/PortfolioCard'
@@ -15,23 +15,16 @@ class Portfolio extends Component {
     }
 
     this.makeProjectsArray = this.makeProjectsArray.bind(this)
+    this.makeProjectsComponents = this.makeProjectsComponents.bind(this)
   }
 
   componentDidMount = () => {
-    const projectsArr = this.makeProjectsArray(this.props.projects)
-    const projectsComponents = projectsArr.map((project) => {
-      return <PortfolioCard project = {project} key={project.key} />
-    })
-    this.setState({projects: projectsComponents})
+    this.makeProjectsComponents(this.props.projects)
   }
 
   componentWillReceiveProps = (nextProps) => {
     if (nextProps.projects !== this.props.projects) {
-      const projectsArr = this.makeProjectsArray(nextProps.projects)
-			const projectsComponents = projectsArr.map((project) => {
-				return <PortfolioCard project = {project} key={project.key} />
-      })
-      this.setState({projects: projectsComponents})
+      this.makeProjectsComponents(nextProps.projects)
     }
   }
 
@@ -41,6 +34,14 @@ class Portfolio extends Component {
       projectsArr.push(projects[key])
     }
     return projectsArr
+  }
+
+  makeProjectsComponents = (projects) => {
+    const projectsArr = this.makeProjectsArray(projects)
+    const projectsComponents = projectsArr.map((project) => {
+      return <PortfolioCard project={project} key={project.key}/>
+    })
+    this.setState({projects: projectsComponents})
   }
 
   render() {

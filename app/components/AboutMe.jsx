@@ -10,7 +10,7 @@ const styles = {
 }
 
 const AboutMe = () => (
-  <div>
+  <div className="about-me-container">
     <div className="about-me-outer">
       <div className="about-me-inner">
         <img id="avatar" src="images/avatar.png" />

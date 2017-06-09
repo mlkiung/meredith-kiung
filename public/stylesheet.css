@@ -10,6 +10,10 @@ fonts {
 }
 */
 
+.about-me-container {
+  margin-top: 10%;
+}
+
 .about-me-outer {
 	margin: 5%;
   display: flex;
@@ -145,6 +149,7 @@ fonts {
   color: black;
 	width: inherit;
 	padding-right: 2em;
+  letter-spacing: .75em;
 }
 
 .font-mono {
@@ -227,4 +232,12 @@ a:hover {
 
 #flat-button {
 	color: black;
+}
+
+#dialog-padding {
+  padding-top: 10%;
+}
+
+.carousel-slider {
+   height: 525px !important;
 }

@@ -31,8 +31,8 @@ const NavBar = () => {
       <Link to={'/'}>
         <FlatButton
           label="Meredith Kiung"
-          labelStyle={{fontSize: '1.5em'}}
-          style={Object.assign({ buttonStyle }, {fontFamily: "'Alfa Slab One', cursive"})} />
+          labelStyle={{fontSize: '1.75em', letterSpacing: '1px'}}
+          style={Object.assign({ buttonStyle }, {fontFamily: "'Anton', sans-serif"})} />
       </Link>
     </div>
   )

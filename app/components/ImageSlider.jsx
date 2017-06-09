@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
 class ImageSlider extends Component {
   componentDidMount() {
-    $('.carousel.carousel-slider').carousel({fullWidth: true})
+    // ALL THREE OF THESE METHODS WORK
+    // $('.carousel.carousel-slider').carousel({indicators: true})
+    // $(ReactDOM.findDOMNode(this)).carousel({indicators: true})
+    this.$node = $(this.refs.imageSlider)
+    this.$node.carousel({indicators: true})
   }
 
-  render() {
+  render(props) {
     const images = this.props.images
     return (
-      <div className="carousel carousel-slider">
+      <div ref="imageSlider" className="carousel carousel-slider">
         {images && images.map((image, i) => {
           const idxStr = i.toString()
           return (
@@ -23,31 +28,3 @@ class ImageSlider extends Component {
 }
 
 export default ImageSlider
-
-// import React, { Component } from 'react'
-
-// class ImageSlider extends Component {
-//   componentDidMount() {
-//     $('.slider').slider()
-//   }
-
-//   render() {
-//     const images = this.props.images
-
-//     return (
-//       <div className="slider">
-//         <ul className="slides">
-//           {images && images.map((image, i) => {
-//             return (
-//               <li key={i}>
-//                 <img src={image} className="image-slider-img" />
-//               </li>
-//             )
-//           })}
-//         </ul>
-//       </div>
-//     )
-//   }
-// }
-
-// export default ImageSlider

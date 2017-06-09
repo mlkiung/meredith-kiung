@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { browserHistory } from 'react-router'
 import Dialog from 'material-ui/Dialog'
 import FlatButton from 'material-ui/FlatButton'
 import RaisedButton from 'material-ui/RaisedButton'
@@ -11,6 +12,7 @@ class ImageModal extends Component {
 
     this.state = {
       open: false,
+      images: this.props.project.images,
     }
 
     this.handleOpen = this.handleOpen.bind(this)
@@ -18,11 +20,12 @@ class ImageModal extends Component {
   }
 
   handleOpen = () => {
-    this.setState({open: true})
+    this.setState({open: true, images: this.props.project.images})
   }
 
   handleClose = () => {
-    this.setState({open: false})
+    this.setState({ open: false })
+    browserHistory.push('/portfolio')
   }
 
   render() {
@@ -35,7 +38,7 @@ class ImageModal extends Component {
         />,
     ]
 
-    const images = this.props.project.images
+    // const images = this.props.project.images
 
     return (
       <div>
@@ -44,16 +47,19 @@ class ImageModal extends Component {
           label={`View ${this.props.project.title}`}
           onTouchTap={this.handleOpen}
           fullWidth={true}
-					style={style}
+					style={styles.flatButton}
           />
         <Dialog
+          id="dialog-padding"
           title={this.props.project.title}
           actions={actions}
           modal={false}
 					open={this.state.open}
-					onRequestClose={this.handleClose}
+          onRequestClose={this.handleClose}
+          style={styles.rootElement}
+          titleStyle={styles.titleStyle}
           >
-          <ImageSlider images={images} />
+          <ImageSlider images={this.state.images} />
         </Dialog>
       </div>
     )
@@ -62,6 +68,14 @@ class ImageModal extends Component {
 
 export default ImageModal
 
-const style = {
-  fontFamily: "'Questrial', sans-serif"
+const styles = {
+  flatButton: {
+    fontFamily: "'Questrial', sans-serif"
+  },
+  titleStyle: {
+    fontFamily: "'Anton', sans-serif"
+  },
+  rootElement: {
+    paddingTop: '2em'
+  }
 }
