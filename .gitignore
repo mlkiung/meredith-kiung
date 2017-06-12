@@ -16,3 +16,6 @@ firebase-debug.log
 
 #Ignore README
 README.md
+
+#Ignore firebase credentials
+fire/*

@@ -2,7 +2,7 @@ const firebase = require('firebase')
 
 // -- // -- // -- // Firebase Config // -- // -- // -- //
 const config = {
-  apiKey: 'AIzaSyC3Cfb6J5naNuMVvnK45NisB42kB-vsVKc',
+  apiKey: 'AIzaSyD3wTsvipNXH84wTfNhGiugumfBJVDO8lc',
   authDomain: 'meredithkiung-45dcc.firebaseapp.com',
   databaseURL: 'https://meredithkiung-45dcc.firebaseio.com',
   projectId: 'meredithkiung-45dcc',
