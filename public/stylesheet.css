@@ -241,3 +241,28 @@ a:hover {
 .carousel-slider {
    height: 525px !important;
 }
+
+.welcome-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.welcome-component {
+  display: flex;
+  height: 500px;
+  width: 500px;
+  /*-webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden; */
+}
+
+.code-component {
+  display: flex;
+  background-color: black;
+}

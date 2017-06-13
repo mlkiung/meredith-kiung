@@ -17,6 +17,7 @@ import store from './store'
 import { loadAllPosts, loadAllProjects } from 'APP/app/redux/action-creators'
 
 import Navbar from 'APP/app/components/Navbar'
+import Welcome from 'APP/app/components/Welcome'
 import AboutMe from 'APP/app/components/AboutMe'
 import PostList from 'APP/app/components/PostList'
 import PostCard from 'APP/app/components/PostCard'
@@ -51,6 +52,7 @@ render(
     <Router history={browserHistory}>
       <Route path="/" component={App} onEnter={onAppEnter}>
         <IndexRedirect to="/home"/>
+        <Route path="/welcome" component={Welcome} />
         <Route path="/home" component={AboutMe} />
         <Route path="/about-me" component={AboutMe} />
         <Route path="/posts" component={PostList} />
