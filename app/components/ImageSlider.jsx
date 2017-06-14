@@ -28,3 +28,14 @@ class ImageSlider extends Component {
 }
 
 export default ImageSlider
+
+
+/*
+/Users/mlkiung/Desktop/programming-projects/meredithkiung/public/images/CupOfSugar/CupOfSugarLogo_052917_v5.jpg, /Users/mlkiung/Desktop/programming-projects/meredithkiung/public/images/CupOfSugar/CupOfSugarLogoReduced_052917_v6.jpg, /Users/mlkiung/Desktop/programming-projects/meredithkiung/public/images/CupOfSugar/CupOfSugar Wireframes_052717.001.jpeg, /Users/mlkiung/Desktop/programming-projects/meredithkiung/public/images/CupOfSugar/CupOfSugar Wireframes_052717.002.jpeg, /Users/mlkiung/Desktop/programming-projects/meredithkiung/public/images/CupOfSugar/CupOfSugar Wireframes_052717.003.jpeg, /Users/mlkiung/Desktop/programming-projects/meredithkiung/public/images/CupOfSugar/CupOfSugar Wireframes_052717.004.jpeg,
+/Users/mlkiung/Desktop/programming-projects/meredithkiung/public/images/CupOfSugar/CupOfSugar Wireframes_052717.005.jpeg,
+/Users/mlkiung/Desktop/programming-projects/meredithkiung/public/images/CupOfSugar/CupOfSugar Wireframes_052717.006.jpeg,
+/Users/mlkiung/Desktop/programming-projects/meredithkiung/public/images/CupOfSugar/CupOfSugar Wireframes_052717.007.jpeg,
+/Users/mlkiung/Desktop/programming-projects/meredithkiung/public/images/CupOfSugar/CupOfSugar Wireframes_052717.008.jpeg,
+/Users/mlkiung/Desktop/programming-projects/meredithkiung/public/images/CupOfSugar/CupOfSugar Wireframes_052717.009.jpeg
+
+*/

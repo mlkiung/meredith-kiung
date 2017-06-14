@@ -36,9 +36,13 @@ class NewProject extends Component {
   }
 
   handleInputChange = (event) => {
+    // using one handleChange function for all inputs by declaring a name for each
     const name = event.target.name
     let value = event.target.value
 
+    // if the input's name is 'images,' parse each element in the array
+    // each image path will now start with 'images/../..'
+    // set the state, matching the name of the input to the value
     if (name === 'images') {
       value = value.split(', ').map((val) => {
         const idx = val.indexOf('images/')

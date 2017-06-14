@@ -266,3 +266,7 @@ a:hover {
   display: flex;
   background-color: black;
 }
+
+.carousel .carousel-item > img {
+  height: inherit;
+}

@@ -16,8 +16,9 @@ export const addNewPost = (post) => {
   newPostKeyRef.set({key: newPostKey, title: post.title, content: post.content, tags: post.tags})
 }
 
+// Action Creator
 export const loadAllPosts = (posts) => receiveAllPosts(posts)
-
+// Action
 const receiveAllPosts = (posts) => ({
   type: GET_ALL_POSTS,
   posts
@@ -38,11 +39,11 @@ export const addNewProject = (project) => {
   })
 }
 
+// Action Creator
 export const loadAllProjects = (projects) => receiveAllProjects(projects)
-
+// Action
 const receiveAllProjects = (projects) => ({
   type: GET_ALL_PROJECTS,
   projects
 })
-
 

@@ -14,23 +14,29 @@ class WelcomeText extends Component {
   }
 
   render() {
-    const text = (
+    const text1 = `
       class HelloWorld extends Component {
         render() {
           return (
             <div>
-              <button onClick={this.onButtonClick}>
-                <MeredithKiung />
-              </button>
-            </div>
+    `
+    const text2 = `
+            < /div>
           )
         }
-      }
+    `
+
+    const button = (
+      <button className="welcome-button" onClick={this.onButtonClick}>
+        {`<MeredithKiung />`}
+      </button>
     )
 
     return (
       <div className="welcome-component" >
-        <pre className="code-component">{text}</pre>
+        <pre className="code-component">{text1}</pre>
+        {button}
+        <pre className="code-component">{text2}</pre>
       </div>
     )
   }
