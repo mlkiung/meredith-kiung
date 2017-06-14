@@ -38,10 +38,11 @@ class NewPost extends Component {
 
   onPublishPress(event) {
     event.preventDefault()
-    console.log(this.props)
+
     const title = this.state.title
     const content = this.state.content
     const tags = this.state.tags
+    
     this.props.addNewPost({ title, content, tags })
     browserHistory.push('/')
   }

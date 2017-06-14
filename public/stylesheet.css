@@ -11,7 +11,7 @@ fonts {
 */
 
 .about-me-container {
-  margin-top: 10%;
+  margin-top: 1em;
 }
 
 .about-me-outer {
@@ -269,4 +269,8 @@ a:hover {
 
 .carousel .carousel-item > img {
   height: inherit;
+}
+
+#contact-icons {
+  margin-top: 2em;
 }

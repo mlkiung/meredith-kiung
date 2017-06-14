@@ -9,8 +9,6 @@ const PortfolioCard = (props) => {
   const github = project.github
   const website = project.website
 
-  console.log('props in PortfolioCard', props)
-
   AOS.init()
 
   return (
