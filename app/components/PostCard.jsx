@@ -23,7 +23,7 @@ class PostCard extends Component {
           <CardMedia>
             <img
               className="img-postcard"
-              src={'https://placehold.it/350x150'}
+              src={'images/BlogPosts/portfolio.jpeg'}
               />
           </CardMedia>
           <CardTitle
