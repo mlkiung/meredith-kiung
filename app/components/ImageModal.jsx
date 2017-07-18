@@ -33,12 +33,10 @@ class ImageModal extends Component {
       <FlatButton
         label="Close"
         primary={true}
-				onTouchTap={this.handleClose}
-				keyboardFocused={true}
+        onTouchTap={this.handleClose}
+        keyboardFocused={true}
         />,
     ]
-
-    // const images = this.props.project.images
 
     return (
       <div>
@@ -47,14 +45,14 @@ class ImageModal extends Component {
           label={`View ${this.props.project.title}`}
           onTouchTap={this.handleOpen}
           fullWidth={true}
-					style={styles.flatButton}
+          style={styles.flatButton}
           />
         <Dialog
           id="dialog-padding"
           title={this.props.project.title}
           actions={actions}
           modal={false}
-					open={this.state.open}
+          open={this.state.open}
           onRequestClose={this.handleClose}
           style={styles.rootElement}
           titleStyle={styles.titleStyle}

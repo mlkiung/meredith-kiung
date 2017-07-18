@@ -41,7 +41,7 @@ const App = ({children}) =>
       <Navbar />
       <div id="app-body">
         {children}
-			</div>
+      </div>
     </div>
   </MuiThemeProvider>
 
