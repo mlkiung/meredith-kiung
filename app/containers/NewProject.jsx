@@ -154,5 +154,3 @@ class NewProject extends Component {
 const mapDispatchToProps = dispatch => ({addNewProject})
 
 export default connect(mapDispatchToProps)(NewProject)
-
-/Users/mlkiung/Desktop/programming-projects/meredithkiung/public/images/WalmartProductManager/wpm-code.jpg
