@@ -20,7 +20,7 @@ const NavBar = () => {
       <Link to={'/portfolio'}>
         <FlatButton label="Portfolio" style={buttonStyle} />
       </Link>
-      <Link to={'/posts'}>
+      <Link id="blog" to={'/posts'}>
         <FlatButton label="Blog" style={buttonStyle} />
       </Link>
     </div>

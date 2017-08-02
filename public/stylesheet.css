@@ -274,3 +274,7 @@ a:hover {
 #contact-icons {
   margin-top: 2em;
 }
+
+#blog {
+  display: none;
+}

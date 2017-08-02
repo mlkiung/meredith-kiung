@@ -15,26 +15,27 @@ class NewPost extends Component {
       tags: ''
     }
 
-    this.onTitleChange = this.onTitleChange.bind(this)
-    this.onContentChange = this.onContentChange.bind(this)
+    this.onChange = this.onChange.bind(this)
+    // this.onContentChange = this.onContentChange.bind(this)
     this.onPublishPress = this.onPublishPress.bind(this)
-    this.onTagsChange = this.onTagsChange.bind(this)
+    // this.onTagsChange = this.onTagsChange.bind(this)
   }
 
-  onTitleChange(event) {
+  onChange(event) {
     event.preventDefault()
-    this.setState({title: event.target.value})
+    const name = event.target.name
+    this.setState({[name]: event.target.value})
   }
 
-  onContentChange(event) {
-    event.preventDefault()
-    this.setState({content: event.target.value})
-  }
+  // onContentChange(event) {
+  //   event.preventDefault()
+  //   this.setState({content: event.target.value})
+  // }
 
-  onTagsChange(event) {
-    event.preventDefault()
-    this.setState({tags: event.target.value})
-  }
+  // onTagsChange(event) {
+  //   event.preventDefault()
+  //   this.setState({tags: event.target.value})
+  // }
 
   onPublishPress(event) {
     event.preventDefault()
@@ -42,7 +43,7 @@ class NewPost extends Component {
     const title = this.state.title
     const content = this.state.content
     const tags = this.state.tags
-    
+
     this.props.addNewPost({ title, content, tags })
     browserHistory.push('/')
   }
@@ -56,19 +57,19 @@ class NewPost extends Component {
             <div className="form-group">
               <label htmlFor="inputTitle" className="col-lg-2 control-label">Title</label>
               <div className="col-lg-10">
-                <input type="text" className="form-control" id="inputTitle" placeholder="Title" value={this.state.title} onChange={this.onTitleChange}/>
+                <input type="text" className="form-control" id="inputTitle" placeholder="Title" value={this.state.title} name="title" onChange={this.onChange}/>
               </div>
             </div>
             <div className="form-group">
               <label htmlFor="contentArea" className="col-lg-2 control-label" placeholder="Content">Content</label>
               <div className="col-lg-10">
-                <textarea value={this.state.content} onChange={this.onContentChange} className="form-control" rows="3" id="contentArea"></textarea>
+                <textarea value={this.state.content} name="content" onChange={this.onChange} className="form-control" rows="3" id="contentArea"></textarea>
               </div>
             </div>
             <div className="form-group">
               <label htmlFor="tagArea" className="col-lg-2 control-label" placeholder="tags">Tags</label>
               <div className="col-lg-10">
-                <textarea value={this.state.tags} onChange={this.onTagsChange} className="form-control" rows="3" id="tagArea"></textarea>
+                <textarea value={this.state.tags} name="tags" onChange={this.onChange} className="form-control" rows="3" id="tagArea"></textarea>
               </div>
             </div>
             <div className="form-group">
