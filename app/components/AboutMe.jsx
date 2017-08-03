@@ -22,36 +22,32 @@ const AboutMe = () => (
         <p>I graduated from Johns Hopkins University with a degree in Psychological & Brain Sciences and a minor in Entrepreneurship & Management. Upon graduation, I focused on helping small businesses grow and flourish through disciplined adherence to strategic processes. It proved exhilarating for many years. But I still sought more.</p>
         <h1>Developer Story</h1>
         <p>I realized that building a technology-based skill set would be the best way to rapidly optimize my value to companies, clients, and organizations. As such, I enrolled in The Grace Hopper Program--the all-female division of Fullstack Academy. I had begun programming as an undergraduate in college. I found myself falling in love with it as a young professional.</p>
-        <h1>Skills</h1>
-        <p>
-          <ul>
-            <li>Javascript (ES5 / ES6)</li>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>jQuery</li>
-            <li>ReactJS</li>
-            <li>React Native</li>
-            <li>Redux</li>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>Sequelize</li>
-            <li>PostgreSQL</li>
-            <li>Webpack / Babel</li>
-            <li>Git / GitHub</li>
-            <li>Firebase (Realtime Database / Hosting / Authentication)</li>
-            <li>Agile Development Methodologies</li>
-            <li>LESS / Sass</li>
-            <li>SQL</li>
-          </ul>
-        </p>
+        <h1>I've worked with:</h1>
+        <ul>
+          <li>Javascript (ES5 / ES6)</li>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>jQuery</li>
+          <li>ReactJS</li>
+          <li>React Native</li>
+          <li>Redux</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>Sequelize</li>
+          <li>PostgreSQL</li>
+          <li>Webpack / Babel</li>
+          <li>Git / GitHub</li>
+          <li>Firebase (Realtime Database / Hosting / Authentication)</li>
+          <li>Agile Development Methodologies</li>
+          <li>LESS / Sass</li>
+          <li>SQL</li>
+        </ul>
         <h1>Familiar With</h1>
-        <p>
-          <ul>
-            <li>Mocha / Chai / Jasmine</li>
-            <li>WebSockets / Socket.io</li>
-            <li>Heroku</li>
-          </ul>
-        </p>
+        <ul>
+          <li>Mocha / Chai / Jasmine</li>
+          <li>WebSockets / Socket.io</li>
+          <li>Heroku</li>
+        </ul>
         <h1>Contact Me</h1>
         <p>I absolutely love to hear from people!</p>
         <p>Also head over to my photo blog on Instagram, @code.ess, where I visually document my trials and tribulations--and sometimes the occasional coding meme.</p>

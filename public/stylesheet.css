@@ -41,8 +41,11 @@ fonts {
   animation-direction: alternate;
 }
 
-.about-me-container p {
+.about-me-container p, li {
   font-family: 'Questrial', sans-serif;
+}
+
+.about-me-container p {
   margin-bottom: 1em;
 }
 
