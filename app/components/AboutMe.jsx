@@ -23,7 +23,7 @@ const AboutMe = () => (
       <div className="about-me-background">
         <div className="center-contents">
           <h1>Hello!</h1>
-          <p>I am a New York City-based Software Engineer with a love of Javascript, dogs, and creating beautiful and responsive web and mobile apps.</p>
+          <p>I am a New York City-based Software Engineer with a love of Javascript, dogs, and creating beautiful web and mobile apps.</p>
           <h1>Background</h1>
           <p>I graduated from Johns Hopkins University with a degree in Psychological & Brain Sciences and a minor in Entrepreneurship & Management. Upon graduation, I focused on helping small businesses grow and flourish through disciplined adherence to strategic processes. It proved exhilarating for many years. But I still sought more.</p>
           <h1>Developer Story</h1>
