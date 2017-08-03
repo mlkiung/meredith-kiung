@@ -53,8 +53,7 @@ const AboutMe = () => (
           </ul>
         </p>
         <h1>Contact Me</h1>
-        <p>I absolutely love to hear from people.</p>
-        <p>Be sure to check out my blog (link above), where I post everything from tutorials and tips that I’ve found useful, to awkward stories and my thoughts on being a young female developer living and working in New York City.</p>
+        <p>I absolutely love to hear from people!</p>
         <p>Also head over to my photo blog on Instagram, @code.ess, where I visually document my trials and tribulations--and sometimes the occasional coding meme.</p>
       </div>
       <div id="contact-icons">
