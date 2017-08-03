@@ -14,6 +14,15 @@ fonts {
   margin-top: 1em;
 }
 
+.about-me-container h1 {
+  font-size: 2em;
+}
+
+.about-me-container p {
+  font-family: 'Questrial', sans-serif;
+  margin-bottom: 1em;
+}
+
 .about-me-outer {
 	margin: 5%;
   display: flex;
@@ -27,6 +36,7 @@ fonts {
   display: flex;
   justify-content: center;
 }
+
 
 #avatar {
   border-radius: 50%;

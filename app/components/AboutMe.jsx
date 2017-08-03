@@ -17,13 +17,13 @@ const AboutMe = () => (
       </div>
       <div>
         <h1>Hello!</h1>
-        <div>I am a New York City-based Software Engineer with a love of Javascript, dogs, and creating beautiful and responsive web and mobile apps.</div>
+        <p>I am a New York City-based Software Engineer with a love of Javascript, dogs, and creating beautiful and responsive web and mobile apps.</p>
         <h1>Background</h1>
-        <div>I graduated from Johns Hopkins University with a degree in Psychological & Brain Sciences and a minor in Entrepreneurship & Management. Upon graduation, I focused on helping small businesses grow and flourish through disciplined adherence to strategic processes. It proved exhilarating for many years. But I still sought more.</div>
+        <p>I graduated from Johns Hopkins University with a degree in Psychological & Brain Sciences and a minor in Entrepreneurship & Management. Upon graduation, I focused on helping small businesses grow and flourish through disciplined adherence to strategic processes. It proved exhilarating for many years. But I still sought more.</p>
         <h1>Developer Story</h1>
-        <div>I realized that building a technology-based skill set would be the best way to rapidly optimize my value to companies, clients, and organizations. As such, I enrolled in The Grace Hopper Program--the all-female division of Fullstack Academy. I had begun programming as an undergraduate in college. I found myself falling in love with it as a young professional.</div>
+        <p>I realized that building a technology-based skill set would be the best way to rapidly optimize my value to companies, clients, and organizations. As such, I enrolled in The Grace Hopper Program--the all-female division of Fullstack Academy. I had begun programming as an undergraduate in college. I found myself falling in love with it as a young professional.</p>
         <h1>Skills</h1>
-        <div>
+        <p>
           <ul>
             <li>Javascript (ES5 / ES6)</li>
             <li>HTML5</li>
@@ -39,29 +39,23 @@ const AboutMe = () => (
             <li>Webpack / Babel</li>
             <li>Git / GitHub</li>
             <li>Firebase (Realtime Database / Hosting / Authentication)</li>
-            <li>Docker</li>
             <li>Agile Development Methodologies</li>
-          </ul>
-        </div>
-        <h1>Familiar With</h1>
-        <div>
-          <ul>
             <li>LESS / Sass</li>
             <li>SQL</li>
+          </ul>
+        </p>
+        <h1>Familiar With</h1>
+        <p>
+          <ul>
             <li>Mocha / Chai / Jasmine</li>
             <li>WebSockets / Socket.io</li>
             <li>Heroku</li>
-            <li>AWS</li>
           </ul>
-        </div>
+        </p>
         <h1>Contact Me</h1>
-        <div>
-          I absolutely love to hear from people.
-          <br/>
-          Be sure to check out my blog (link above), where I post everything from tutorials and tips that I’ve found useful, to awkward stories and my thoughts on being a young female developer living and working in New York City.
-          <br/>
-          Also head over to my photo blog on Instagram, @code.ess, where I visually document my trials and tribulations--and sometimes the occasional coding meme.
-        </div>
+        <p>I absolutely love to hear from people.</p>
+        <p>Be sure to check out my blog (link above), where I post everything from tutorials and tips that I’ve found useful, to awkward stories and my thoughts on being a young female developer living and working in New York City.</p>
+        <p>Also head over to my photo blog on Instagram, @code.ess, where I visually document my trials and tribulations--and sometimes the occasional coding meme.</p>
       </div>
       <div id="contact-icons">
         <a href="https://github.com/mlkiung" target="_blank"><span className="fa fa-github fa-2x about-icons" aria-hidden="true"></span></a>
