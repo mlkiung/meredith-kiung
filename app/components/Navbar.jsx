@@ -18,10 +18,10 @@ const NavBar = () => {
   const rightButtons = (
     <div>
       <Link to={'/portfolio'}>
-        <FlatButton label="Portfolio" style={buttonStyle} />
+        <FlatButton className="hoverButton" label="Portfolio" style={buttonStyle} />
       </Link>
       <Link id="blog" to={'/posts'}>
-        <FlatButton label="Blog" style={buttonStyle} />
+        <FlatButton className="hoverButton" label="Blog" style={buttonStyle} />
       </Link>
     </div>
   )
@@ -30,6 +30,7 @@ const NavBar = () => {
     <div>
       <Link to={'/'}>
         <FlatButton
+          className="hoverButton"
           label="Meredith Kiung"
           labelStyle={{fontSize: '1.75em', letterSpacing: '1px'}}
           style={Object.assign({ buttonStyle }, {fontFamily: "'Anton', sans-serif"})} />
