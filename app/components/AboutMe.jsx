@@ -10,16 +10,16 @@ const styles = {
 }
 
 const AboutMe = () => (
-  <div className="about-me-container container-fluid">
-    <div className="about-me-outer">
-      <div className="about-me-inner">
-        <img id="avatar" src="images/avatar.png" />
-      </div>
+  <div className="about-me-container">
+    <div className="about-me-header">
+      <img id="avatar" src="images/avatar.png" />
       <div id="contact-icons">
         <a href="https://github.com/mlkiung" target="_blank"><span className="fa fa-github fa-2x about-icons" aria-hidden="true"></span></a>
         <a href="https://www.linkedin.com/in/meredith-kiung/" target="_blank"><span className="fa fa-linkedin fa-2x about-icons" aria-hidden="true"></span></a>
         <a href="mailto:meredith-kiung@gmail.com"><span className="fa fa-envelope fa-2x about-icons" aria-hidden="true"></span></a>
       </div>
+    </div>
+    <div className="about-me-outer">
       <div className="about-me-background">
         <div className="center-contents">
           <h1>Hello!</h1>
