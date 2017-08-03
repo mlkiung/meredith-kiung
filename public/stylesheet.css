@@ -11,7 +11,7 @@ fonts {
 */
 
 .about-me-container {
-  margin-top: 1em;
+  padding-top: 6em;
 }
 
 .about-me-container h1 {
@@ -24,13 +24,7 @@ fonts {
   to { transform: rotate(0deg)}
 }
 
-/* @keyframes wiggleRight {
-  from { transform: rotate(20deg)}
-  50% { transform: rotate(-20deg)}
-  to { transform:  rotate(0deg)}
-} */
-
-.about-me-container h1:hover {
+/* .about-me-container h1:hover {
   -webkit-animation-name: wiggleLeft;
   -webkit-animation-duration: 0.25s;
   -webkit-animation-iteration-count: 2;
@@ -39,19 +33,19 @@ fonts {
   animation-duration: 0.25s;
   animation-iteration-count: 2;
   animation-direction: alternate;
-}
+} */
 
 .about-me-container p, li {
   font-family: 'Questrial', sans-serif;
+  font-size: 1.25em;
 }
 
 .about-me-container p {
   margin-bottom: 1em;
 }
 
-
 .about-me-outer {
-	margin: 5%;
+	margin: 5% 5% 0 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,6 +58,33 @@ fonts {
   justify-content: center;
 }
 
+.about-me-background {
+  background-color: #d1d3d8;
+  margin: 3em 0 2em 0;
+  padding: 2em;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.center-contents {
+  max-width: 800px;
+  margin: 2em 0 2em 0;
+}
+
+ @keyframes highlightParagraph {
+  from {color: gray;}
+  to {color: black;}
+}
+
+.center-contents p:hover, li:hover {
+  -webkit-animation-name: highlightParagraph;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-direction: alternate;
+  animation-name: highlightParagraph;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
 
 #avatar {
   border-radius: 50%;
@@ -223,11 +244,11 @@ hr {
 	 margin-top: .3em;
  }
 
-#app-bar {
+ #app-bar {
   padding-top: 10px;
-	position: fixed;
+	position: fixed !important;
 	top: 0px;
-	z-index: 10;
+	z-index: 50;
 }
 
 #new-project-container {
@@ -321,3 +342,12 @@ a:hover {
 #blog {
   display: none;
 }
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75em;
+}
+
