@@ -18,10 +18,34 @@ fonts {
   font-size: 2em;
 }
 
+@keyframes wiggleLeft {
+  from { transform: rotate(0deg)}
+  50% { transform: rotate(-2deg)}
+  to { transform: rotate(0deg)}
+}
+
+/* @keyframes wiggleRight {
+  from { transform: rotate(20deg)}
+  50% { transform: rotate(-20deg)}
+  to { transform:  rotate(0deg)}
+} */
+
+.about-me-container h1:hover {
+  -webkit-animation-name: wiggleLeft;
+  -webkit-animation-duration: 0.25s;
+  -webkit-animation-iteration-count: 2;
+  -webkit-animation-direction: alternate;
+  animation-name: wiggleLeft, wiggleRight;
+  animation-duration: 0.25s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
 .about-me-container p {
   font-family: 'Questrial', sans-serif;
   margin-bottom: 1em;
 }
+
 
 .about-me-outer {
 	margin: 5%;
@@ -42,6 +66,18 @@ fonts {
   border-radius: 50%;
   height: 65%;
   width: 65%;
+}
+
+@keyframes zoom {
+  from { transform: scale(1) }
+  to {transform: scale(1.2)}
+}
+
+#avatar:hover {
+  -webkit-animation-name: zoom;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: zoom;
+  animation-fill-mode: forwards;
 }
 
 .font-heading {
@@ -264,12 +300,6 @@ a:hover {
   display: flex;
   height: 500px;
   width: 500px;
-  /*-webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  opacity: 0;
-  visibility: hidden; */
 }
 
 .code-component {
