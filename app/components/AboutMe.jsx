@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Paper from 'material-ui/Paper'
+// import Paper from 'material-ui/Paper'
 
-const styles = {
-  Paper: {
-    height: '250px',
-    width: '250px',
-  }
-}
+// const styles = {
+//   Paper: {
+//     height: '250px',
+//     width: '250px',
+//   }
+// }
 
 const AboutMe = () => (
   <div className="about-me-container">
@@ -57,8 +57,7 @@ const AboutMe = () => (
       </div>
     </div>
     <footer>
-      <p>Built with love by Meredith Kiung</p>
-      <p>Copyright 2017</p>
+      <p>Meredith Kiung | 2017</p>
     </footer>
   </div>
 )
