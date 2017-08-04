@@ -1,0 +1,425 @@
+/*
+fonts {
+  font-family: 'Nixie One', cursive;
+  font-family: 'Cutive Mono', monospace;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
+  font-family: 'Raleway Dots', cursive;
+  font-family: 'Questrial', sans-serif;
+  font-family: 'Alfa Slab One', cursive;
+}
+*/
+
+ body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+/* body {
+  font-family: Roboto;
+  font-size: 12px;
+  color: #424242;
+} */
+
+/* h1, h2, h3, h4, h5 {
+  margin: 0;
+} */
+
+/* header, nav, footer, section, article, div {
+  box-sizing: border-box;
+} */
+
+/* ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+} */
+
+/* img, embed, object, video {
+  max-width: 100%;
+} */
+
+/* nav a, button {
+  min-width: 48px;
+  min-height: 48px;
+} */
+
+.about-me-container {
+  padding-top: 5em;
+  height: 100%;
+  width: 100vw;
+
+  h1 {
+    font-size: 2em;
+  }
+
+  p, li {
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.25em;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+// .about-me-container h1 {
+//   font-size: 2em;
+// }
+
+@keyframes wiggleLeft {
+  from { transform: rotate(0deg)}
+  50% { transform: rotate(-2deg)}
+  to { transform: rotate(0deg)}
+}
+
+// .about-me-container p, li {
+//   font-family: 'Questrial', sans-serif;
+//   font-size: 1.25em;
+// }
+
+// .about-me-container p {
+//   margin-bottom: 1em;
+// }
+
+.about-me-outer {
+	margin: 0  5% 0 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-me-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image:
+  linear-gradient(transparent, black 99%),
+  url(./images/skyline_2560.jpeg);
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 768) {
+  .about-me-header {
+    min-height: 700px;
+    width: auto;
+  }
+}
+
+.about-me-background {
+  background-color: #d1d3d8;
+  padding: 2em;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+// .center-contents {
+//   max-width: 800px;
+//   margin: 2em 0 2em 0;
+// }
+
+ @keyframes highlightParagraph {
+  from {color: gray;}
+  to {color: black;}
+}
+
+.center-contents {
+  max-width: 800px;
+  margin: 2em 0 2em 0;
+
+  p:hover, li:hover {
+    -webkit-animation-name: highlightParagraph;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-direction: alternate;
+    animation-name: highlightParagraph;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+  }
+}
+
+#avatar {
+  border-radius: 50%;
+  border: 5px solid white;
+  height: 20em;
+  width: 20em;
+  margin-top: 2em;
+}
+
+@keyframes zoom {
+  from { transform: scale(1) }
+  to {transform: scale(1.2)}
+}
+
+.hoverButton:hover {
+  -webkit-animation-name: zoom;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: zoom;
+  animation-fill-mode: forwards;
+  background-color: black;
+}
+
+.fa:hover {
+  -webkit-animation-name: zoom;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: zoom;
+  animation-fill-mode: forwards;
+}
+
+.font-heading {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.font-body {
+  font-family: 'Rajdhani', sans-serif;
+  margin: 1em;
+}
+
+#app-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+#post-list {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.post-card {
+  margin-bottom: 2em;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+#tags-color {
+  color: gray;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.portfolio-container {
+  width: 100%;
+}
+
+.outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.inner-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+	flex-grow: 1;
+  height: 100vh;
+  border-radius: 0px;
+  border-color: gray;
+  border-width: 5px;
+}
+
+.inner-info {
+	display: flex;
+  flex-direction: column;
+  align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 2;
+	height: 100vh;
+  border-radius: 0px;
+  border-color: gray;
+  border-width: 5px;
+  background-color: #d1d3d8;
+}
+
+.scroll-img {
+  background-image: url('https://images5.alphacoders.com/568/568653.jpg');
+}
+
+.one-third {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 66%;
+}
+
+.middle {
+  justify-content: center;
+	align-items: flex-start;
+	padding: 2em;
+}
+
+.font-middle-body {
+  font-family: 'Questrial', sans-serif;
+  font-size: 1em;
+  text-align: left;
+  height: 50%;
+  color: black;
+	width: inherit;
+	padding-right: 4.55em;
+}
+
+.middle-header {
+  display: flex;
+	width: 50em;
+}
+
+.font-middle-header {
+  font-family: 'Questrial', sans-serif;
+  font-size: 33px;
+  text-align: left;
+  height: 25%;
+  color: black;
+	width: inherit;
+	padding-right: 2em;
+  letter-spacing: .75em;
+}
+
+.font-mono {
+  font-family: 'Cutive Mono', monospace;
+}
+
+.font-sans {
+  font-family: 'Questrial', sans-serif;
+}
+
+.font-serif {
+  font-family: 'Nixie One', cursive;
+}
+
+#post-card-no-border {
+  border: none;
+}
+
+hr {
+  border-color: black;
+  border: 2px solid;
+  margin-top: .3em;
+}
+
+ #app-bar {
+  padding-top: 10px;
+	position: fixed !important;
+	top: 0px;
+  z-index: 50;
+  border: 1px solid black;
+}
+
+#new-project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+.new-project-form-label {
+  margin: 1em;
+}
+
+.new-project-input {
+  margin-left: 1em;
+}
+
+.image-slider-img {
+  padding: 1em;
+}
+
+a {
+  color: gray;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+.about-icons {
+  margin: 0.5em;
+  color: white;
+}
+
+.technologies {
+  margin-right: 1em;
+	margin-bottom: 1em;
+}
+
+.technologies-container {
+	margin-bottom: 1em;
+}
+
+.description-container {
+	margin-bottom: 1em;
+}
+
+#flat-button {
+	color: black;
+}
+
+#dialog-padding {
+  padding-top: 10%;
+}
+
+.carousel-slider {
+   height: 525px !important;
+}
+
+.welcome-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.welcome-component {
+  display: flex;
+  height: 500px;
+  width: 500px;
+}
+
+.code-component {
+  display: flex;
+  background-color: black;
+}
+
+.carousel .carousel-item > img {
+  height: inherit;
+}
+
+#contact-icons {
+  margin-top: 2em;
+}
+
+#blog {
+  display: none;
+}
+
+footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75em;
+  background-color: black;
+  color: white;
+  padding-top: 0.5em;
+}
+
