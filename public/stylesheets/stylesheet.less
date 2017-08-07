@@ -1,5 +1,6 @@
 @import 'animations';
 @import 'technologies';
+@import 'mixins';
 
 /*
 fonts {
@@ -69,25 +70,6 @@ fonts {
   }
 }
 
-// .about-me-container h1 {
-//   font-size: 2em;
-// }
-
-@keyframes wiggleLeft {
-  from { transform: rotate(0deg)}
-  50% { transform: rotate(-2deg)}
-  to { transform: rotate(0deg)}
-}
-
-// .about-me-container p, li {
-//   font-family: 'Questrial', sans-serif;
-//   font-size: 1.25em;
-// }
-
-// .about-me-container p {
-//   margin-bottom: 1em;
-// }
-
 .about-me-outer {
 	margin: 0  5% 0 5%;
   display: flex;
@@ -131,27 +113,12 @@ fonts {
   justify-content: center;
 }
 
-// .center-contents {
-//   max-width: 800px;
-//   margin: 2em 0 2em 0;
-// }
-
-// @keyframes highlightParagraph {
-//   from {color: gray;}
-//   to {color: black;}
-// }
-
 .center-contents {
   max-width: 800px;
   margin: 2em 0 2em 0;
 
   p:hover, li:hover {
-    -webkit-animation-name: highlightParagraph;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-direction: alternate;
-    animation-name: highlightParagraph;
-    animation-fill-mode: forwards;
-    animation-direction: alternate;
+    .highlightParagraph();
   }
 }
 
@@ -163,24 +130,21 @@ fonts {
   margin-top: 2em;
 }
 
-// @keyframes zoom {
-//   from { transform: scale(1) }
-//   to {transform: scale(1.2)}
-// }
+a i {
+  color: white;
+  &:hover {
+    .hoverZoom();
+    color: white;
+  }
+}
 
 .hoverButton:hover {
-  -webkit-animation-name: zoom;
-  -webkit-animation-fill-mode: forwards;
-  animation-name: zoom;
-  animation-fill-mode: forwards;
+  .hoverZoom();
   background-color: black;
 }
 
 .fa:hover {
-  -webkit-animation-name: zoom;
-  -webkit-animation-fill-mode: forwards;
-  animation-name: zoom;
-  animation-fill-mode: forwards;
+  .hoverZoom();
 }
 
 .font-heading {
@@ -353,14 +317,6 @@ hr {
 
 .image-slider-img {
   padding: 1em;
-}
-
-a {
-  color: gray;
-}
-
-a:hover {
-  color: lightgray;
 }
 
 .about-icons {
